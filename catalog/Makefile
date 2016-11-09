@@ -1,3 +1,6 @@
+default: extract
+
+
 lex.yy.c: extract.l
 	lex extract.l
 
@@ -10,4 +13,4 @@ test: parse.sh
 	./parse.sh
 
 clean:
-	$(RM) out.txt
+	$(RM) out.txt lex.yy.c
