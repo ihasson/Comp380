@@ -4,5 +4,4 @@ Step 2: git remote add origin https://github.com/ihasson/Comp380_Team_Project
 -----------------------------------------------------------------------------
 
 All The Time Steps
-Step 3: git pull https://github.com/ihasson/Comp380_Team_Project
-
+Step 3: git pull origin master
