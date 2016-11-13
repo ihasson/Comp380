@@ -14,6 +14,9 @@ test-AI: AIUnitTests.class AIAI.class
 Course.class: Course.java
 	$(JCC) Course.java
 
+Section.class: Section.java Course.class
+	$(JCC) Section.java
+
 format: 
 	uncrustify -c uncrustify.cfg Course.java --no-backup
 
