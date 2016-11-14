@@ -1,7 +1,11 @@
 /* 
  * Izzy Hasson, other NAMES 
  */
-import java.util.*;
+import java.util.Linked*;
+import java.util.HashMap;
+import java.util.Array*;
+import java.util.Map;
+
 //import Course;
 //import Major;
 //import Section;
@@ -11,13 +15,50 @@ import java.util.*;
 /**
  * Some anonymous helper functions for AIAI.
  */
+/*
+ * Global Var Names
+ *
+ * 
 interface Ai {
     public Object funcName(LinkedList<Object> input);
 }
+
 
 /**
  * The actual AI Class. It figures things out and makes decisions.
  */
 class AIAI {
+    
+    public static void permute(LinkedList lperm, LinkedList lx, ) {   
+        if(lx.size() == 0){
+        } else {
+            for(int i = 0; i< lx.size(); i++) {
+                LinkedList newlx = new LinkedList();
+                LinkedList newlperm = new LinkedList();
+                newlperm.addAll(lperm);
+                newlx.addAll(lx);
+                newlperm.add(newlx.remove(i));
+                permute(newlperm, newlx);
+            }
+       // } else {
+       //     //String s = new String();
+       //     for(int i = 0; i< lperm.size(); i++) {
+       //         s = s + lperm.get(i) + "  ";
+       //     }
+       //     out.println(s);
+        }
+    } 
+    public static LinkedList<Course> findDependencies(Course c) {
+        LinkedHashMap<String, Course> cList = 
+            new LinkedHashMap<String, Course>();
+        findDependencies(c, cList);        
+    }
+    private static void findDependencies(Course c, 
+                                    HashMap<String,Course> cList) {
+        for(String s : c.getPreRequisites()) {
+            
+        }
+        
+    }
 }
 
