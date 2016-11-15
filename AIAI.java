@@ -55,10 +55,15 @@ class AIAI {
     }
     private static void findDependencies(Course c, 
                                     HashMap<String,Course> cList) {
-        for(String s : c.getPreRequisites()) {
-            
+        if(cList.containsKey(c.getName())){
+            return;
+        } else {
+            cList.put(c.getName(), c);
+            for(String s : c.getPreRequisites()) {
+                if(!(cList.containsValue(s))){
+                    findDependencies(globalCourseTable.get(s), cList);
+                }
+            }
         }
-        
-    }
 }
 
