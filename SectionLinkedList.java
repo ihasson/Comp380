@@ -1,7 +1,8 @@
 /****************************************************************************************
 Name of Module:SectionLinkedList.java
  
-Purpose:This Section object is responsible for linking a list of sections and is used as a unit test.
+Purpose:The SectionLinkedList object is responsible for linking a list of sections and is used with SectionUnitTest.java to
+confirm everything is working as expected.
 Inputs:  Section Objects
 Outputs: Prints Sections
 Submodules: n/a
