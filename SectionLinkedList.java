@@ -1,4 +1,14 @@
-
+/****************************************************************************************
+Name of Module:SectionLinkedList.java
+ 
+Purpose:The SectionLinkedList object is responsible for linking a list of sections and is used with SectionUnitTest.java to
+confirm everything is working as expected.
+Inputs:  Section Objects
+Outputs: Prints Sections
+Submodules: n/a
+Author: Michael Harootoonyan
+Date:   Nov 11, 2016
+****************************************************************************************/
 public class SectionLinkedList {
 
 	private Section head;

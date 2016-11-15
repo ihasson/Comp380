@@ -1,3 +1,20 @@
+/****************************************************************************************
+Name of Module:Section.java
+ 
+Purpose:This Section object is responsible for holding section information. It is a pure storage object that inherits from the Course object, and is utilized for display purposes.
+The section object stores all necessary information about a class a student can take at CSUN.
+
+Inputs:  section ID, section name, component, grading option, start date, end date, days of week, start time, end time, location, notes, and instructor.
+
+Outputs: section ID, section name, component, grading option, start date ,end date, days of week, start time, end time, location, notes, and instructor.
+
+Submodules: n/a
+
+Author: Michael Harootoonyan
+
+Date:   Nov 11, 2016
+
+****************************************************************************************/
 import java.util.ArrayList;
 
 public class Section {
@@ -37,9 +54,9 @@ public class Section {
 		this.startTime	   = "";
 		this.endTime	   = "";
 		this.location	   = "";
-		this.notes		   = null;
+		this.notes	   = null;
 		this.instructor	   = "";
-		this.next		   = null;
+		this.next	   = null;
 	}
 	
 	
@@ -62,9 +79,9 @@ public class Section {
 		this.startTime	   = startTime;
 		this.endTime	   = endTime;
 		this.location	   = location;
-		this.notes		   = notes;
+		this.notes	   = notes;
 		this.instructor	   = instructor;
-		this.next		   = next;
+		this.next	   = next;
 	}
 	
 	

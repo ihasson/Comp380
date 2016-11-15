@@ -1,3 +1,13 @@
+/****************************************************************************************
+Name of Module:SectionLinkedList.java
+ 
+Purpose:The SectionUnitTest object is used as a unit test to
+Inputs:  n/a
+Outputs: n/a
+Submodules: SectionLinkedList.java, Section.java
+Author: Michael Harootoonyan
+Date:   Nov 11, 2016
+****************************************************************************************/
 import java.util.ArrayList;
 
 public class SectionUnitTest {
