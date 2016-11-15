@@ -8,7 +8,7 @@ Inputs:  section ID, section name, component, grading option, start date, end da
 
 Outputs: section ID, section name, component, grading option, start date ,end date, days of week, start time, end time, location, notes, and instructor.
 
-Submodules: not available.
+Submodules: N/A
 
 Author: Michael Harootoonyan
 
