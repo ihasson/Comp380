@@ -54,9 +54,9 @@ public class Section {
 		this.startTime	   = "";
 		this.endTime	   = "";
 		this.location	   = "";
-		this.notes		   = null;
+		this.notes	   = null;
 		this.instructor	   = "";
-		this.next		   = null;
+		this.next	   = null;
 	}
 	
 	
