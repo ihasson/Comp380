@@ -28,3 +28,7 @@ For questions about javadoc try "man javadoc" in your favorite terminal
 emulator or search engine.
 
 Other tools to be aware of are jdb, jshell, JFLEX, and uncrustify.
+
+Also for for adding course information I recommend downloading the webpage with 
+the course info you want to use and using the the lexer in the catolog directory 
+to pull out the information before making whichever edits you need. 
