@@ -32,3 +32,15 @@ Other tools to be aware of are jdb, jshell, JFLEX, and uncrustify.
 Also for for adding course information I recommend downloading the webpage with 
 the course info you want to use and using the the lexer in the catolog directory 
 to pull out the information before making whichever edits you need. 
+
+I will push some parsed text from the lexer program in the file 
+catalog-CITandCS.txt for you guys to use incase you can't figure out how to 
+build lexer scripts. Tell me if there are any difficulties with pasring from 
+that file. 
+
+Other Notes: Feel free to add to this file.
+
+I added a Main class since I am guessing that would be the best place to put 
+or initialize the objects used through out the program.
+
+
