@@ -7,7 +7,7 @@ Inputs:  Section Objects
 Outputs: Prints Sections
 Submodules: n/a
 Author: Michael Harootoonyan
-Date:   Nov 11, 2016
+Date:   Nov 17, 2016
 ****************************************************************************************/
 public class SectionLinkedList {
 
@@ -42,18 +42,18 @@ public class SectionLinkedList {
 			System.out.println("Section ID:"+temp.getSectionID());
 			System.out.println("Section Name:"+temp.getSectionName());
 			System.out.println("Component:"+temp.getComponent());
-			System.out.println("Grading Option:"+temp.getGradingOption());
-			System.out.println("Start Date:"+temp.getStartDate());
-			System.out.println("End Date:"+temp.getEndDate());
+			//System.out.println("Grading Option:"+temp.getGradingOption());
+			//System.out.println("Start Date:"+temp.getStartDate());
+			//System.out.println("End Date:"+temp.getEndDate());
 			System.out.println("Days Of Week:"+temp.getDaysOfWeek());
 			System.out.println("Start Time:"+temp.getStartTime());
 			System.out.println("End Time:"+temp.getEndTime());
 			System.out.println("Location:"+temp.getLocation());
+			System.out.println("Instructor:"+temp.getInstructor());
+			//System.out.print("Notes:");
+			//for(int i = 0; i < temp.getNotes().get(0).length; i++)
+				//System.out.println(temp.getNotes().get(0)[i]);
 			
-			System.out.print("Notes:");
-			for(int i = 0; i < temp.getNotes().get(0).length; i++)
-				System.out.println(temp.getNotes().get(0)[i]);
-			System.out.println("Instructor:         "+temp.getInstructor());
 			temp = temp.getNext();
 			System.out.println("\n");
 			
@@ -64,3 +64,4 @@ public class SectionLinkedList {
 	
 	
 }
+
