@@ -5,6 +5,7 @@ import java.util.*;
 import java.util.HashMap;
 /*
  * Global Var Names
+ * tempName for GlobalCourseTable = GCT;
  *
  */ 
 /**
@@ -24,8 +25,8 @@ class AIAI {
  * integer to be temporarilly associated with a Cousrse.
  */
     class COP implements Comparable{
-        String s; //maybe change to Course
-        int i;
+        private String s; //maybe change to Course
+        private int i;
         public void COP(String string, int integer){
             s = string;
             i = integer;
@@ -67,16 +68,61 @@ class AIAI {
      * This determines what courses are needed and puts them into an ordered
      * list so that 
      */
-
+    // Later need to check for type consistency and used correct method names
     public static Planner generatePlanner(Student student){
     /* Step 1: find all needed courses */
-    /* Step 2: Topological Sort */
-    /* Step 3: Massage data into output format. */
+        Major maj = student.getMajor();
+        ArrayList<Courses> majorReqs = maj.getMajorRequirements();
+        majorReqs = findDependencies(majorReqs);
+        majorReqs = removeCoursesTaken(majorReqs,student.getCoursesTaken);
+        
+    /* Step : Topological Sort */
+        ArrayList<COP> tentativePlan = topologicalSort(majorReqs);
+    /* Step : transform the tentative plan into a firm plan */
+
+    /* Step : Massage data into output format. */
     }
     private static ArrayList<COP> topologicalSort(ArrayList<Courses> list){
-        J
+    /* Massage data into needed format. */
+        LinkedHashMap<String,COP> graph = new LinkedHashMap<>();
+        ArrayList<COP> solution = new ArrayList<>();
+        
+        for(Course c : list){
+            graph.add(c.getName(), 0);
+        }
+        int i = 0;
+        while(graph.size() != 0){
+            ArrayList<COP> temp = new ArrayList<>();
+    /* find nodes with no predessessor */
+            graph.forEach(name, pair) -> { 
+                Course  c = gCT.get(name);
+                ArrayList<Stirng> pReqs = c.getPreRequisites();
+                for(String s : rReqs){
+                    if(graph.containsKey(s)){
+                        COP something  = graph.getValue(s);
+                        something.setInt(something.getInt() + 1);
+                    }
+                }
+            } 
+            /* number when the nodes were taken off the graph */
+            /* if the node is not to be taken off the graph reset it */
+            graph.forEach(name , pair) -> {
+                if(pair.getInt() == 0){
+                    pair.setInt(i);
+                    temp.add(pair);
+                } else {
+                    pair.setInt(0);
+                }
+            }
+            /* take nodes off graph and put them in solution set */
+            for(COP pair : temp){
+                graph.remove(pair.getString());
+                solution.add(pair);
+            }
+            i++;
+        }
+        return solution;
     }
-    private static void topoSort(){
     
     /**
      * Finds the dependencies of a course using depth first search
