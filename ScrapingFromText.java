@@ -1,5 +1,5 @@
 /****************************************************************************************
-Name of Module:Section.java
+Name of Module:ScrapingFromText.java
  
 Purpose:	Collects on the computer science classes offered at CSUN from a text file.
 
