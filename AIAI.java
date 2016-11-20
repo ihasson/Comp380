@@ -43,8 +43,12 @@ class AIAI {
         public void setInt(int a){
             i=a;
         }
-        public int compareTo(COP p){
-            return this.i - p.getInt();
+        public int compareTo(Object o) throws ClassCastException{
+            if(!(o instanceof COP)){
+                throw new ClassCastException("object not COP");
+            }
+            int val = ((COP) o).getInt();
+            return this.i - val;
         }
     }
 // I haven't decided whether this will be included  in the final program.    
