@@ -19,7 +19,7 @@ class Course {
     Course(String name, int unitAmount){
         courseName = name;
         units = unitAmount;
-        ArrayList<String> preRequisites = new ArrayList<>();
+        preRequisites = new ArrayList<>();
     }
 
     public void addPreRequisite(String course){
