@@ -32,7 +32,6 @@ Revision History:
 *******************************************************************************/
 
 
-package planner;
 
 
 public class PlannerUnit {
