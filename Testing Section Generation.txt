@@ -1,0 +1,44 @@
+To Test Generation of Sections using a CSV file… use this for reading/parsing the file and refer to the sequence of the cs_sections.txt file.
+
+***A complete cs_sections.txt will be completed soon.
+
+
+ArrayList<Section> sectionsList = new ArrayList<Section>();
+		
+		Scanner scanner = new Scanner(new File("/Users/jc/Comp380_Team_Project/cs_sections.txt"));
+		scanner.useDelimiter(",");
+		
+		for(int i=0; i < 3; i++){
+			Section s = new Section();
+			s.setCourse(scanner.next());
+			s.setClassName(scanner.next());
+			s.setType(scanner.next());
+			s.setUnits(scanner.next());
+			s.setSection(scanner.next());
+			s.setLocation(scanner.next());
+			s.setDays(scanner.next());
+			s.setStartTime(scanner.next());
+			s.setEndTime(scanner.next());
+			s.setTeacher(scanner.next());
+			
+			sectionsList.add(s);
+		}
+		
+		for(int j=0; j<3; j++){
+			System.out.println(sectionsList.get(j).getCourse());
+			System.out.println(sectionsList.get(j).getClassName());
+			System.out.println(sectionsList.get(j).getType());
+			System.out.println(sectionsList.get(j).getUnits());
+			System.out.println(sectionsList.get(j).getSection());
+			System.out.println(sectionsList.get(j).getLocation());
+			System.out.println(sectionsList.get(j).getDays());
+			System.out.println(sectionsList.get(j).getStartTime());
+			System.out.println(sectionsList.get(j).getEndTime());
+			System.out.println(sectionsList.get(j).getTeacher());
+		}
+		
+		System.out.println();
+		System.out.println("This is test of getting last element in ArrayList");
+		System.out.println(sectionsList.get(sectionsList.size()-1).getTeacher());
+
+	}
