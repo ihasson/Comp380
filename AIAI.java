@@ -19,10 +19,11 @@ interface Ai {
 /**
  * The actual AI Class. It figures things out and makes decisions.
  */
-public class GLOBAL{
-    public static HashMap<String,Course> courseTable = new HashMap<>();
-}
 class AIAI {
+public class Student{}
+public class GLOBAL{
+    public HashMap<String,Course> courseTable = new HashMap<>();
+}
 /*
  * COP stands for Course Order Pair. It allows one to easily keep track of an 
  * integer to be temporarilly associated with a Cousrse.
