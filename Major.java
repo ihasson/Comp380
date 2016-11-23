@@ -1,4 +1,4 @@
-//package Builder;
+package Builder;
 
 /*
  * Jonathan Carrasco
@@ -76,5 +76,13 @@ public class Major {
 			}
 			
 		}
+	}
+	
+	public String getName(){
+		return majorName;
+	}
+	
+	public ArrayList<Course> getMajorReqs(){
+		return majorReqs;
 	}
 }
