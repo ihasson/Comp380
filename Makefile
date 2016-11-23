@@ -1,8 +1,8 @@
 JCC = javac
 JFLAG = -g
 
-#default: 
-AIAI.class: AIAI.java Course.class
+#default: Main.class 
+AIAI.class: AIAI.java Course.class Planner.class Section.class Major.class
 	$(JCC) AIAI.java
 
 AIUnitTests.class: AIUnitTests.java AIAI.class 
@@ -19,6 +19,9 @@ Section.class: Section.java Course.class
 
 Planner.class: Planner.java
 	$(JCC) Planner.java
+
+Major.class: Major.java
+	$(JCC) Major.java
 
 format: 
 	uncrustify -c uncrustify.cfg Course.java --no-backup
