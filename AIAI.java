@@ -19,10 +19,11 @@ interface Ai {
 /**
  * The actual AI Class. It figures things out and makes decisions.
  */
-public class GLOBAL{
+class AIAI {
+/*this inner class is meant to be temporary*/
+class GLOBAL{
     public static HashMap<String,Course> courseTable = new HashMap<>();
 }
-class AIAI {
 /*
  * COP stands for Course Order Pair. It allows one to easily keep track of an 
  * integer to be temporarilly associated with a Cousrse.
@@ -79,10 +80,10 @@ class AIAI {
     public /*static*/ /*Planner*/ void  generatePlanner(Student student){
     /* Step 1: find all needed courses */
         //Planner plan = new Planner();
-        Major maj = student.getMajor();
-        ArrayList<Course> majorReqs = maj.getMajorRequirements();
-        majorReqs = findDependencies(majorReqs);
-        majorReqs = removeCoursesTaken(majorReqs,student.getCoursesTaken);
+        Major maj = student.getStudentMajor();
+        ArrayList<Course> majorReqs = maj.getMajorReqs();
+        ArrayList<COP> reqs = findDependencies(majorReqs);
+        reqs = removeCoursesTaken(majorReqs,student.getCoursesTaken());
         
     /* Step : Topological Sort */
         ArrayList<COP> tentativePlan = topologicalSort(majorReqs);
