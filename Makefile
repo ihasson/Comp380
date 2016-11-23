@@ -23,6 +23,9 @@ Planner.class: Planner.java
 Major.class: Major.java
 	$(JCC) Major.java
 
+Student.class: Student.java
+	$(JCC) Student.java
+
 format: 
 	uncrustify -c uncrustify.cfg Course.java --no-backup
 documentation: AIAI.java Section.java Planner.java Course.java  
