@@ -59,7 +59,9 @@ public class Student {
 	}//end
 	
 //public Methods:
-	
+    public LinkedList<Course> getCoursesTaken(){
+        return studentTransscript;
+    }
 	public void updatTransscript(Course input){
 		this.studentTransscript.add(input);
 	}//end 
