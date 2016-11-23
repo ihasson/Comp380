@@ -20,10 +20,6 @@ interface Ai {
  * The actual AI Class. It figures things out and makes decisions.
  */
 class AIAI {
-/*this inner class is meant to be temporary*/
-class GLOBAL{
-    public static HashMap<String,Course> courseTable = new HashMap<>();
-}
 /*
  * COP stands for Course Order Pair. It allows one to easily keep track of an 
  * integer to be temporarilly associated with a Cousrse.
@@ -52,47 +48,41 @@ class GLOBAL{
             return this.i - val;
         }
     }
-// I haven't decided whether this will be included  in the final program.    
-//    public /*static*/ void permute(LinkedList lperm, LinkedList lx ) {   
-//        if(lx.size() == 0){
-//        } else {
-//            for(int i = 0; i< lx.size(); i++) {
-//                LinkedList newlx = new LinkedList();
-//                LinkedList newlperm = new LinkedList();
-//                newlperm.addAll(lperm);
-//                newlx.addAll(lx);
-//                newlperm.add(newlx.remove(i));
-//                permute(newlperm, newlx);
-//            }
-//       // } else {
-//       //     //String s = new String();
-//       //     for(int i = 0; i< lperm.size(); i++) {
-//       //         s = s + lperm.get(i) + "  ";
-//       //     }
-//       //     out.println(s);
-//        }
-//    } 
+    class CourseTable {
+        private HashMap<String, Course>  gCT = new HashMap<>();
+        CourseTable(ArrayList<Course> list){
+            for(Course c : list){
+                gCT.put(c.getName(), c);
+            }
+        }
+        public Course get(String s){
+            gCT.get(s);
+        }
+    }
     /**
      * This determines what courses are needed and puts them into an ordered
      * list so that 
      */
     // Later need to check for type consistency and used correct method names
-    public /*static*/ /*Planner*/ void  generatePlanner(Student student){
+    public /*static*/ /*Planner*/ void  generatePlanner(Student student, 
+            CourseTable gCT){
     /* Step 1: find all needed courses */
         //Planner plan = new Planner();
         Major maj = student.getStudentMajor();
         ArrayList<Course> majorReqs = maj.getMajorReqs();
-        ArrayList<COP> reqs = findDependencies(majorReqs);
-        reqs = removeCoursesTaken(majorReqs,student.getCoursesTaken());
+        ArrayList<COP> reqs = findDependencies(majorReqs, gCT);
+        reqs = removeCoursesTaken(reqs,student.getCoursesTaken());
         
     /* Step : Topological Sort */
-        ArrayList<COP> tentativePlan = topologicalSort(majorReqs);
+        ArrayList<COP> tentativePlan = topologicalSort(majorReqs, gCT);
     /* Step : transform the tentative plan into a firm plan */
 
     /* Step : Massage data into output format. */
         //return plan;
     }
-    private /*static*/ ArrayList<COP> topologicalSort(ArrayList<Course> list){
+
+    private /*static*/ ArrayList<COP> topologicalSort(ArrayList<Course> list,
+            CourseTable gCT){
     /* Massage data into needed format. */
         LinkedHashMap<String,COP> graph = new LinkedHashMap<>();
         ArrayList<COP> solution = new ArrayList<>();       
@@ -139,17 +129,18 @@ class GLOBAL{
     /**
      * Finds the dependencies of a course using depth first search
      */
-    public /*static*/ ArrayList<Course> findDependencies(Course c) {
+    public /*static*/ ArrayList<Course> findDependencies(Course c, 
+            CourseTable gCT) {
         LinkedHashMap<String, COP> cList = 
             new LinkedHashMap<String, COP>();
         int depth = 0; // turns out keeping track of depth is pointless.
         ArrayList<Course> courseList = new ArrayList<>();
         ArrayList<COP> pairList= new ArrayList<>();
-        findDependencies(c, cList, depth);
+        findDependencies(c, cList, depth, gCT);
         //pairList = clist.toArray();
         //pairList.sort();
         for(COP p : pairList){
-            courseList.add(gCT.get(p.getString()));
+            courseList.add(gCT.get(p.getString())); //that damned coursetable
         }
         return courseList;
     }
@@ -158,11 +149,11 @@ class GLOBAL{
      * Note that it returns an array of COP because I need the ordering.
      */
     public /*static*/ ArrayList<COP> findDependencies(
-                        ArrayList<Course> courseList) {
+                        ArrayList<Course> courseList, CourseTable gCT) {
         ArrayList<COP> solution = new ArrayList<>();
         LinkedHashMap<String,COP> cList = new LinkedHashMap<>();
         for(Course c: courseList) {
-            findDependencies(c, cList, 0);
+            findDependencies(c, cList, 0, gCT);
         }
         cList.forEach((s,elmt) -> {
             solution.add(elmt);
@@ -173,7 +164,7 @@ class GLOBAL{
      * A helper to the other methods of the same name.
      */
     private /*static*/ void findDependencies(Course c, 
-            LinkedHashMap<String,COP> cList, int depth) {
+            LinkedHashMap<String,COP> cList, int depth, CourseTable gCT) {
         if(cList.containsKey(c.getName())){
             return;
         } else {
@@ -184,7 +175,7 @@ class GLOBAL{
                 // if get PreRequisites doesn't return a String array then
                 // need to change above.
                 if(!(cList.containsKey(s))){
-                    findDependencies(GLOBAL.courseTable.get(s), cList, depth);
+                    findDependencies(gCT.get(s), cList, depth, gCT);
                     //need to know the name of the global Course Table
                 }
             }
