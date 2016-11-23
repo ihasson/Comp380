@@ -1,4 +1,3 @@
-package Builder;
 
 /*
  * Jonathan Carrasco
@@ -28,8 +27,8 @@ public class Major {
 	private int majorID;//holds the id for a Major
 	private String majorName;//holds the name of Major
 	
-	ArrayList <Course> majorReqs = //holds the required Courses
-			new ArrayList <Course>();//for a Major
+	ArrayList<Course> majorReqs = //holds the required Courses
+			new ArrayList<Course>();//for a Major
 	
 	/* 
 	 * Major constructor
