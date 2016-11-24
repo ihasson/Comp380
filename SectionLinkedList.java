@@ -1,3 +1,5 @@
+package team6;
+
 /****************************************************************************************
 Name of Module:SectionLinkedList.java
  
@@ -8,16 +10,34 @@ Outputs: Prints Sections
 Submodules: n/a
 Author: Michael Harootoonyan
 Date:   Nov 17, 2016
+
+Reviewer:   Michael Harootoonyan
+Date:       Nov 23, 2016
+
+
+Revision History:
+            Programmer: 	Michael Harootoonyan
+            Date: 	Nov 23, 2016
+            Description of Change: 	added integer seats_open to print
+            Reviewer: 	Michael Harootoonyan
+            Date of Review: 	Nov 23, 2016
+
 ****************************************************************************************/
+import java.io.PrintWriter;
+
 public class SectionLinkedList {
 
 	private Section head;
-	private int numberOfSections;
+	public int numberOfSections;
 	
 	SectionLinkedList()
 	{
 		head = null;
 		numberOfSections = 0;
+	}
+	
+	public Section fetchHead(){
+		return head;
 	}
 	
 	public void addSection(Section newSection){
@@ -50,6 +70,7 @@ public class SectionLinkedList {
 			System.out.println("End Time:"+temp.getEndTime());
 			System.out.println("Location:"+temp.getLocation());
 			System.out.println("Instructor:"+temp.getInstructor());
+			System.out.println("Open Seats:"+temp.getSeatsOpen());
 			//System.out.print("Notes:");
 			//for(int i = 0; i < temp.getNotes().get(0).length; i++)
 				//System.out.println(temp.getNotes().get(0)[i]);
@@ -60,8 +81,39 @@ public class SectionLinkedList {
 		}
 	}
 	
+	public void changeNumOfOpenSeats(int sectionId, int seatsOpen)
+	{
+		Section temp = head;
+		while(temp!=null)
+		{
+			if(temp.getSectionID() == sectionId)
+			{
+				temp.setSeatsOpen(seatsOpen);
+
+			}
+			temp = temp.getNext();
+			
+		}
+	}
 	
+	public void writeSectionsToTxt(String filename)
+	{
+		//Creating a text file (note that this will overwrite the file if it already exists):
+			try{
+			    PrintWriter writer = new PrintWriter(filename+".txt", "UTF-8");
+			    Section temp = head;
+			    while(temp!=null)
+			    {
+			    	writer.println("");
+			    }
+			    
+			    writer.println("The first line");
+			    
+			    writer.close();
+			} catch (Exception e) {
+			   // do something
+			}
+	}
 	
 	
 }
-
