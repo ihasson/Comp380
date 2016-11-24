@@ -59,15 +59,38 @@ public class Student {
 	}//end
 	
 //public Methods:
-    public LinkedList<Course> getCoursesTaken(){
-        return studentTransscript;
-    }
+	
+	/*
+	 * adds a course to the list.
+	 */
 	public void updatTransscript(Course input){
 		this.studentTransscript.add(input);
 	}//end 
 	
-	public Course courseTaken(int i){
+	/*
+	 * returns a course from the list at
+	 * the given index i.
+	 */
+	public Course getCorsefromTransscript(int i){
 		return this.studentTransscript.get(i);
+	}//end
+	
+	/*
+	 * returns a boolean if the given course 
+	 * has been taken.
+	 */
+	public boolean corsesTaken(Course input){
+		if(this.studentTransscript.contains(input)){
+			return true;
+		}//end if
+		return false;
+	}//end 
+	
+	/*
+	 * returns the list ass an array of courses
+	 */
+	public Course[] courseLodeout(){
+		return (Course[]) this.studentTransscript.toArray();
 	}//end
 	
 //Get and Set methods:
