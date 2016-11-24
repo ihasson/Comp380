@@ -3,11 +3,6 @@
  */
 import java.util.*;
 import java.util.HashMap;
-/*
- * Global Var Names
- * tempName for GlobalCourseTable = GCT;
- *
- */ 
 /**
  * Some anonymous helper functions for AIAI.
  */
@@ -20,6 +15,7 @@ interface Ai {
  * The actual AI Class. It figures things out and makes decisions.
  */
 class AIAI {
+/*
  * COP stands for Course Order Pair. It allows one to easily keep track of an 
  * integer to be temporarilly associated with a Cousrse.
  */
@@ -69,7 +65,7 @@ class AIAI {
         //Planner plan = new Planner();
         Major maj = student.getStudentMajor();
         ArrayList<Course> majorReqs = maj.getMajorReqs();
-        ArrayList<COP> reqs = findDependencies(majorReqs, gCT);
+        ArrayList<Course> reqs = findDependencies(majorReqs, gCT);
         reqs = removeCoursesTaken(reqs,student.getCoursesTaken());
         
     /* Step : Topological Sort */
@@ -79,7 +75,17 @@ class AIAI {
     /* Step : Massage data into output format. */
         //return plan;
     }
-
+    /* need to ask Cina to add method to check if course has been taken */
+    /* need to test this since it probably won't work as is. */
+    private ArrayList<Course> removeCoursesTaken(ArrayList<Course> reqs,
+                    ArrayList<Course> taken) {   
+        for(Course c : reqs){
+            if(taken.contains(c)){
+                reqs.remove(c);
+            }
+        }
+        return reqs;
+    }
     private /*static*/ ArrayList<COP> topologicalSort(ArrayList<Course> list,
             CourseTable gCT){
     /* Massage data into needed format. */
@@ -98,7 +104,7 @@ class AIAI {
             graph.forEach((name, pair) -> { 
                 Course  c = gCT.get(name);
                 ArrayList<String> pReqs = c.getPreRequisites();
-                for(String s : pReqs){
+                for(String s : pReqs) {
                     if(graph.containsKey(s)){
                         COP something  = graph.get(s);
                         something.setInt(something.getInt() + 1);
@@ -147,15 +153,15 @@ class AIAI {
      * Also finds dependencies but from an array of courses.
      * Note that it returns an array of COP because I need the ordering.
      */
-    public /*static*/ ArrayList<COP> findDependencies(
+    public /*static*/ ArrayList<Course> findDependencies(
                         ArrayList<Course> courseList, CourseTable gCT) {
-        ArrayList<COP> solution = new ArrayList<>();
+        ArrayList<Course> solution = new ArrayList<>();
         LinkedHashMap<String,COP> cList = new LinkedHashMap<>();
         for(Course c: courseList) {
             findDependencies(c, cList, 0, gCT);
         }
         cList.forEach((s,elmt) -> {
-            solution.add(elmt);
+            solution.add(gCT.get(elmt.getString()));
         });
         return solution;
     }
