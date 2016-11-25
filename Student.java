@@ -20,7 +20,7 @@
             Reviewer:
             Date of Review:
  */
-import java.util.LinkedList;
+import java.util.ArrayList;
 
 public class Student {
 	
@@ -32,7 +32,7 @@ public class Student {
 	private Major studentMajor;
 	private Schedule currentSchedule;
 	private Planner studentPlaner;
-	private LinkedList<Course> studentTransscript;
+	private ArrayList<Course> studentTransscript;
 	private char middleInitial;
 	private int studentYearOfAdmit;
 	
@@ -45,7 +45,7 @@ public class Student {
 		this.middleInitial = ' ';
 		this.studentMonthOfAdmit = "";
 		this.studentYearOfAdmit = 0;
-		this.studentTransscript = new LinkedList<Course>();
+		this.studentTransscript = new ArrayList<Course>();
 	}//end
 	
 	public Student(String sId, String sFirstName, String sLastName, char sInit){
@@ -53,13 +53,13 @@ public class Student {
 		this.firstName = sFirstName;
 		this.lastName = sLastName;
 		this.middleInitial = sInit;
-		this.studentTransscript = new LinkedList<Course>();
+		this.studentTransscript = new ArrayList<Course>();
 		this.studentMonthOfAdmit = "not set";
 		this.studentYearOfAdmit = 0;
 	}//end
 	
 //public Methods:
-    public LinkedList<Course> getCoursesTaken(){
+    public ArrayList<Course> getCoursesTaken(){
         return studentTransscript;
     }
 	public void updatTransscript(Course input){

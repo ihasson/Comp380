@@ -7,7 +7,7 @@ import java.util.HashMap;
  * Some anonymous helper functions for AIAI.
  */
 interface Ai {
-    public Object funcName(LinkedList<Object> input);
+    public Object funcName(ArrayList<Object> input);
 }
 
 
@@ -51,7 +51,7 @@ class AIAI {
             }
         }
         public Course get(String s){
-            gCT.get(s);
+            return gCT.get(s);
         }
     }
     /**
@@ -113,6 +113,7 @@ class AIAI {
             }); 
             /* number when the nodes were taken off the graph */
             /* if the node is not to be taken off the graph reset it */
+            for(  ) {
             graph.forEach((name , pair) -> {
                 if(pair.getInt() == 0){
                     pair.setInt(i);
@@ -120,7 +121,7 @@ class AIAI {
                 } else {
                     pair.setInt(0);
                 }
-            });
+            }
             /* take nodes off graph and put them in solution set */
             for(COP pair : temp){
                 graph.remove(pair.getString());

@@ -1,6 +1,5 @@
 /*
  */
-package pkg380;
 
 import java.util.*;
 
