@@ -20,7 +20,7 @@
             Reviewer:
             Date of Review:
  */
-import java.util.ArrayList;
+import java.util.LinkedList;
 
 public class Student {
 	
@@ -32,7 +32,7 @@ public class Student {
 	private Major studentMajor;
 	private Schedule currentSchedule;
 	private Planner studentPlaner;
-	private ArrayList<Course> studentTransscript;
+	private LinkedList<Course> studentTransscript;
 	private char middleInitial;
 	private int studentYearOfAdmit;
 	
@@ -53,7 +53,7 @@ public class Student {
 		this.firstName = sFirstName;
 		this.lastName = sLastName;
 		this.middleInitial = sInit;
-		this.studentTransscript = new ArrayList<Course>();
+		this.studentTransscript = new LinkedList<Course>();
 		this.studentMonthOfAdmit = "not set";
 		this.studentYearOfAdmit = 0;
 	}//end
