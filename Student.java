@@ -65,8 +65,6 @@ public class Student {
 	 */
 	public void updatTransscript(Course input){
 		this.studentTransscript.add(input);
-	public void updatTransscript(Course input){
-		this.studentTransscript.add(input);
 	}//end 
 	
 	/*
@@ -81,7 +79,7 @@ public class Student {
 	 * returns a boolean if the given course 
 	 * has been taken.
 	 */
-	public boolean corsesTaken(Course input){
+	public boolean courseTaken(Course input){
 		if(this.studentTransscript.contains(input)){
 			return true;
 		}//end if
@@ -89,7 +87,7 @@ public class Student {
 	}//end 
 	
 	/*
-	 * returns the list ass an array of courses
+	 * returns the list as an array of courses
 	 */
 	public Course[] courseLodeout(){
 		return (Course[]) this.studentTransscript.toArray();
