@@ -1,0 +1,934 @@
+Section ID:15560
+Section Name:COMP 610 
+Component:SEM
+Days Of Week:We
+Start Time:07:00pm
+End Time:09:45pm
+Location:JD3508
+Instructor:Noga,John J 
+Open Seats:15560
+
+
+Section ID:15634
+Section Name:COMP 598EA 
+Component:SEM
+Days Of Week:Fr
+Start Time:02:00pm
+End Time:04:45pm
+Location:JD1602
+Instructor:Wiegley,Jeffrey 
+Open Seats:15634
+
+
+Section ID:20200
+Section Name:COMP 595MCL 
+Component:LAB
+Days Of Week:TuTh
+Start Time:12:00pm
+End Time:01:15pm
+Location:JD1618
+Instructor:Nahapetian,Ani 
+Open Seats:20200
+
+
+Section ID:20199
+Section Name:COMP 595MC 
+Component:SEM
+Days Of Week:TuTh
+Start Time:11:00am
+End Time:11:50am
+Location:JD1618
+Instructor:Nahapetian,Ani 
+Open Seats:20199
+
+
+Section ID:16075
+Section Name:COMP 587 
+Component:SEM
+Days Of Week:Mo
+Start Time:07:00pm
+End Time:09:45pm
+Location:JD3510
+Instructor:Staff 
+Open Seats:16075
+
+
+Section ID:15976
+Section Name:COMP 585 
+Component:SEM
+Days Of Week:MoWe
+Start Time:05:00pm
+End Time:06:15pm
+Location:JD3508
+Instructor:Staff 
+Open Seats:15976
+
+
+Section ID:15926
+Section Name:COMP 584 
+Component:SEM
+Days Of Week:TuTh
+Start Time:02:00pm
+End Time:03:15pm
+Location:JD2211
+Instructor:Wang,Taehyung 
+Open Seats:15926
+
+
+Section ID:15710
+Section Name:COMP 565 
+Component:SEM
+Days Of Week:MoWe
+Start Time:03:30pm
+End Time:04:45pm
+Location:JD3510
+Instructor:Barnes,Mike 
+Open Seats:15710
+
+
+Section ID:16073
+Section Name:COMP 541 
+Component:SEM
+Days Of Week:TuTh
+Start Time:09:30am
+End Time:10:45am
+Location:JD2211
+Instructor:Wang,Taehyung 
+Open Seats:16073
+
+
+Section ID:19737
+Section Name:COMP 529 
+Component:SEM
+Days Of Week:Tu
+Start Time:07:00pm
+End Time:09:45pm
+Location:JD1618
+Instructor:Pournaghshband,Vahab 
+Open Seats:19737
+
+
+Section ID:20079
+Section Name:COMP 496ALG 
+Component:LEC
+Days Of Week:TuTh
+Start Time:11:00am
+End Time:12:15pm
+Location:JD3508
+Instructor:Schwartz,Diane L 
+Open Seats:20079
+
+
+Section ID:20078
+Section Name:COMP 496ALG 
+Component:LEC
+Days Of Week:TuTh
+Start Time:08:00am
+End Time:09:15am
+Location:JD3508
+Instructor:Schwartz,Diane L 
+Open Seats:20078
+
+
+Section ID:19735
+Section Name:COMP 491L 
+Component:LAB
+Days Of Week:MoWe
+Start Time:05:00pm
+End Time:06:15pm
+Location:JD2211
+Instructor:Staff 
+Open Seats:19735
+
+
+Section ID:19734
+Section Name:COMP 491L 
+Component:LAB
+Days Of Week:MoWe
+Start Time:12:30pm
+End Time:01:45pm
+Location:JD2211
+Instructor:Staff 
+Open Seats:19734
+
+
+Section ID:16226
+Section Name:COMP 491L 
+Component:LAB
+Days Of Week:MoWe
+Start Time:11:00am
+End Time:12:15pm
+Location:JD2211
+Instructor:Staff 
+Open Seats:16226
+
+
+Section ID:16014
+Section Name:COMP 491L 
+Component:LAB
+Days Of Week:TuTh
+Start Time:11:00am
+End Time:12:15pm
+Location:EU103
+Instructor:Wiegley,Jeffrey 
+Open Seats:16014
+
+
+Section ID:15852
+Section Name:COMP 491L 
+Component:LAB
+Days Of Week:TuTh
+Start Time:08:00am
+End Time:09:15am
+Location:JD2211
+Instructor:Fitzgerald,Steven M 
+Open Seats:15852
+
+
+Section ID:19733
+Section Name:COMP 485 
+Component:LEC
+Days Of Week:MoWe
+Start Time:02:00pm
+End Time:03:15pm
+Location:JD3508
+Instructor:Liu,Li 
+Open Seats:19733
+
+
+Section ID:16219
+Section Name:COMP 485 
+Component:LEC
+Days Of Week:TuTh
+Start Time:03:30pm
+End Time:04:45pm
+Location:JD3508
+Instructor:Melara,Gloria E 
+Open Seats:16219
+
+
+Section ID:16181
+Section Name:COMP 484L 
+Component:LAB
+Days Of Week:MoWe
+Start Time:12:00pm
+End Time:01:15pm
+Location:JD1538
+Instructor:Liu,Li 
+Open Seats:16181
+
+
+Section ID:15738
+Section Name:COMP 484L 
+Component:LAB
+Days Of Week:MoWe
+Start Time:09:30am
+End Time:10:45am
+Location:JD1538
+Instructor:Liu,Li 
+Open Seats:15738
+
+
+Section ID:15707
+Section Name:COMP 484 
+Component:LEC
+Days Of Week:MoWe
+Start Time:11:00am
+End Time:11:50am
+Location:JD1538
+Instructor:Liu,Li 
+Open Seats:15707
+
+
+Section ID:15975
+Section Name:COMP 469 
+Component:LEC
+Days Of Week:TuTh
+Start Time:05:30pm
+End Time:06:45pm
+Location:JD3508
+Instructor:Gabrovsky,Peter N 
+Open Seats:15975
+
+
+Section ID:16030
+Section Name:COMP 440 
+Component:LEC
+Days Of Week:Th
+Start Time:07:00pm
+End Time:09:45pm
+Location:JD1593
+Instructor:Staff 
+Open Seats:16030
+
+
+Section ID:15557
+Section Name:COMP 424 
+Component:LEC
+Days Of Week:Tu
+Start Time:07:00pm
+End Time:09:45pm
+Location:JD1553
+Instructor:Staff 
+Open Seats:15557
+
+
+Section ID:15950
+Section Name:COMP 380L 
+Component:LAB
+Days Of Week:MoWe
+Start Time:08:00pm
+End Time:09:15pm
+Location:JD2211
+Instructor:Staff 
+Open Seats:15950
+
+
+Section ID:15554
+Section Name:COMP 380L 
+Component:LAB
+Days Of Week:TuTh
+Start Time:12:30pm
+End Time:01:45pm
+Location:JD2211
+Instructor:Wang,Taehyung 
+Open Seats:15554
+
+
+Section ID:15949
+Section Name:COMP 380 
+Component:LEC
+Days Of Week:MoWe
+Start Time:07:00pm
+End Time:07:50pm
+Location:JD2211
+Instructor:Staff 
+Open Seats:15949
+
+
+Section ID:15553
+Section Name:COMP 380 
+Component:LEC
+Days Of Week:TuTh
+Start Time:11:30am
+End Time:12:20pm
+Location:JD2211
+Instructor:Wang,Taehyung 
+Open Seats:15553
+
+
+Section ID:16024
+Section Name:COMP 333 
+Component:LEC
+Days Of Week:MoWe
+Start Time:11:00am
+End Time:12:15pm
+Location:JD3510
+Instructor:Staff 
+Open Seats:16024
+
+
+Section ID:15549
+Section Name:COMP 333 
+Component:LEC
+Days Of Week:MoWe
+Start Time:08:00am
+End Time:09:15am
+Location:JD3510
+Instructor:Staff 
+Open Seats:15549
+
+
+Section ID:16250
+Section Name:COMP 322L 
+Component:LAB
+Days Of Week:TuTh
+Start Time:03:30pm
+End Time:04:45pm
+Location:JD2215
+Instructor:Gabrovsky,Peter N 
+Open Seats:16250
+
+
+Section ID:16209
+Section Name:COMP 322L 
+Component:LAB
+Days Of Week:TuTh
+Start Time:12:30pm
+End Time:01:45pm
+Location:JD2215
+Instructor:Gabrovsky,Peter N 
+Open Seats:16209
+
+
+Section ID:15552
+Section Name:COMP 322L 
+Component:LAB
+Days Of Week:MoWe
+Start Time:02:00pm
+End Time:03:15pm
+Location:JD1618
+Instructor:Staff 
+Open Seats:15552
+
+
+Section ID:16249
+Section Name:COMP 322 
+Component:LEC
+Days Of Week:TuTh
+Start Time:02:00pm
+End Time:03:15pm
+Location:JD3520
+Instructor:Gabrovsky,Peter N 
+Open Seats:16249
+
+
+Section ID:16177
+Section Name:COMP 322 
+Component:LEC
+Days Of Week:MoWe
+Start Time:12:30pm
+End Time:01:45pm
+Location:JD1618
+Instructor:Staff 
+Open Seats:16177
+
+
+Section ID:16193
+Section Name:COMP 310 
+Component:LEC
+Days Of Week:Sa
+Start Time:11:00am
+End Time:01:45pm
+Location:JD3508
+Instructor:Noga,John J 
+Open Seats:16193
+
+
+Section ID:15798
+Section Name:COMP 310 
+Component:LEC
+Days Of Week:Fr
+Start Time:11:00am
+End Time:01:45pm
+Location:JD3520
+Instructor:Noga,John J 
+Open Seats:15798
+
+
+Section ID:15551
+Section Name:COMP 310 
+Component:LEC
+Days Of Week:MoWe
+Start Time:09:30am
+End Time:10:45am
+Location:EU103
+Instructor:Fitzgerald,Steven M 
+Open Seats:15551
+
+
+Section ID:15672
+Section Name:COMP 300 
+Component:LEC
+Days Of Week:Fr
+Start Time:11:00am
+End Time:01:45pm
+Location:JD3510
+Instructor:Staff 
+Open Seats:15672
+
+
+Section ID:15550
+Section Name:COMP 282 
+Component:LEC
+Days Of Week:Th
+Start Time:07:00pm
+End Time:09:45pm
+Location:JD3508
+Instructor:Staff 
+Open Seats:15550
+
+
+Section ID:15773
+Section Name:COMP 282 
+Component:LEC
+Days Of Week:Tu
+Start Time:07:00pm
+End Time:09:45pm
+Location:JD3508
+Instructor:Staff 
+Open Seats:15773
+
+
+Section ID:19705
+Section Name:COMP 256L 
+Component:LAB
+Days Of Week:TuTh
+Start Time:03:30pm
+End Time:04:45pm
+Location:JD3510
+Instructor:Lorentz,Richard J 
+Open Seats:19705
+
+
+Section ID:15930
+Section Name:COMP 256L 
+Component:LAB
+Days Of Week:MoWe
+Start Time:03:30pm
+End Time:04:45pm
+Location:JD3520
+Instructor:Lorentz,Richard J 
+Open Seats:15930
+
+
+Section ID:19704
+Section Name:COMP 256 
+Component:LEC
+Days Of Week:TuTh
+Start Time:02:00pm
+End Time:03:15pm
+Location:JD3510
+Instructor:Lorentz,Richard J 
+Open Seats:19704
+
+
+Section ID:15929
+Section Name:COMP 256 
+Component:LEC
+Days Of Week:MoWe
+Start Time:02:00pm
+End Time:03:15pm
+Location:JD3520
+Instructor:Lorentz,Richard J 
+Open Seats:15929
+
+
+Section ID:19703
+Section Name:COMP 222 
+Component:LEC
+Days Of Week:TuTh
+Start Time:12:30pm
+End Time:01:45pm
+Location:JD3520
+Instructor:McIlhenny,Robert D 
+Open Seats:19703
+
+
+Section ID:15863
+Section Name:COMP 182L 
+Component:LAB
+Days Of Week:MoWe
+Start Time:08:30pm
+End Time:09:45pm
+Location:JD2215
+Instructor:Staff 
+Open Seats:15863
+
+
+Section ID:15546
+Section Name:COMP 182L 
+Component:LAB
+Days Of Week:FrSa
+Start Time:12:30pm
+End Time:01:45pm
+Location:JD2215
+Instructor:Pham,Son 
+Open Seats:15546
+
+
+Section ID:15544
+Section Name:COMP 182L 
+Component:LAB
+Days Of Week:FrSa
+Start Time:09:30am
+End Time:10:45am
+Location:JD2215
+Instructor:Pham,Son 
+Open Seats:15544
+
+
+Section ID:15862
+Section Name:COMP 182 
+Component:LEC
+Days Of Week:MoWe
+Start Time:07:00pm
+End Time:08:15pm
+Location:JD2215
+Instructor:Staff 
+Open Seats:15862
+
+
+Section ID:15545
+Section Name:COMP 182 
+Component:LEC
+Days Of Week:FrSa
+Start Time:11:00am
+End Time:12:15pm
+Location:JD2215
+Instructor:Pham,Son 
+Open Seats:15545
+
+
+Section ID:15543
+Section Name:COMP 182 
+Component:LEC
+Days Of Week:FrSa
+Start Time:08:00am
+End Time:09:15am
+Location:JD2215
+Instructor:Pham,Son 
+Open Seats:15543
+
+
+Section ID:15947
+Section Name:COMP 122L 
+Component:LAB
+Days Of Week:TuTh
+Start Time:05:30pm
+End Time:06:45pm
+Location:JD2214
+Instructor:Staff 
+Open Seats:15947
+
+
+Section ID:15542
+Section Name:COMP 122L 
+Component:LAB
+Days Of Week:Fr
+Start Time:10:00am
+End Time:12:45pm
+Location:JD2214
+Instructor:Wiegley,Jeffrey 
+Open Seats:15542
+
+
+Section ID:15540
+Section Name:COMP 122L 
+Component:LAB
+Days Of Week:TuTh
+Start Time:02:30pm
+End Time:03:45pm
+Location:JD2214
+Instructor:Wiegley,Jeffrey 
+Open Seats:15540
+
+
+Section ID:15945
+Section Name:COMP 122 
+Component:LEC
+Days Of Week:TuTh
+Start Time:05:00pm
+End Time:05:25pm
+Location:JD2214
+Instructor:Staff 
+Open Seats:15945
+
+
+Section ID:15541
+Section Name:COMP 122 
+Component:LEC
+Days Of Week:Fr
+Start Time:09:00am
+End Time:09:50am
+Location:JD2214
+Instructor:Wiegley,Jeffrey 
+Open Seats:15541
+
+
+Section ID:15539
+Section Name:COMP 122 
+Component:LEC
+Days Of Week:TuTh
+Start Time:02:00pm
+End Time:02:25pm
+Location:JD2214
+Instructor:Wiegley,Jeffrey 
+Open Seats:15539
+
+
+Section ID:15944
+Section Name:COMP 110L 
+Component:LAB
+Days Of Week:TuTh
+Start Time:02:00pm
+End Time:03:15pm
+Location:JD1600A
+Instructor:Melara,Gloria E 
+Open Seats:15944
+
+
+Section ID:15730
+Section Name:COMP 110L 
+Component:LAB
+Days Of Week:TuTh
+Start Time:09:30am
+End Time:10:45am
+Location:JD1104
+Instructor:Melara,Gloria E 
+Open Seats:15730
+
+
+Section ID:15538
+Section Name:COMP 110L 
+Component:LAB
+Days Of Week:TuTh
+Start Time:05:00pm
+End Time:06:15pm
+Location:JD1104
+Instructor:Pournaghshband,Vahab 
+Open Seats:15538
+
+
+Section ID:15814
+Section Name:COMP 110L 
+Component:LAB
+Days Of Week:TuTh
+Start Time:12:30pm
+End Time:01:45pm
+Location:JD1104
+Instructor:Hsu,Wen Chin 
+Open Seats:15814
+
+
+Section ID:15943
+Section Name:COMP 110 
+Component:LEC
+Days Of Week:TuTh
+Start Time:12:30pm
+End Time:01:45pm
+Location:JD1600A
+Instructor:Melara,Gloria E 
+Open Seats:15943
+
+
+Section ID:15729
+Section Name:COMP 110 
+Component:LEC
+Days Of Week:TuTh
+Start Time:08:00am
+End Time:09:15am
+Location:JD1104
+Instructor:Melara,Gloria E 
+Open Seats:15729
+
+
+Section ID:15537
+Section Name:COMP 110 
+Component:LEC
+Days Of Week:TuTh
+Start Time:03:30pm
+End Time:04:45pm
+Location:JD1104
+Instructor:Pournaghshband,Vahab 
+Open Seats:15537
+
+
+Section ID:15815
+Section Name:COMP 110 
+Component:LEC
+Days Of Week:TuTh
+Start Time:11:00am
+End Time:12:15pm
+Location:JD1104
+Instructor:Hsu,Wen Chin 
+Open Seats:15815
+
+
+Section ID:16116
+Section Name:COMP 108 
+Component:LEC
+Days Of Week:TuTh
+Start Time:03:30pm
+End Time:04:45pm
+Location:JD1107
+Instructor:Hsu,Wen Chin 
+Open Seats:16116
+
+
+Section ID:15532
+Section Name:COMP 108 
+Component:LEC
+Days Of Week:TuTh
+Start Time:09:30am
+End Time:10:45am
+Location:JD1600
+Instructor:Hsu,Wen Chin 
+Open Seats:15532
+
+
+Section ID:15631
+Section Name:COMP 105BAS 
+Component:LAB
+Days Of Week:Fr
+Start Time:11:00am
+End Time:01:45pm
+Location:JD1600A
+Instructor:Staff 
+Open Seats:15631
+
+
+Section ID:15921
+Section Name:COMP 100 
+Component:LEC
+Days Of Week:Fr
+Start Time:11:00am
+End Time:01:45pm
+Location:JD1107
+Instructor:Staff 
+Open Seats:15921
+
+
+Section ID:15920
+Section Name:COMP 100 
+Component:LEC
+Days Of Week:Fr
+Start Time:11:00am
+End Time:01:45pm
+Location:JD1105
+Instructor:Staff 
+Open Seats:15920
+
+
+Section ID:15918
+Section Name:COMP 100 
+Component:LEC
+Days Of Week:Fr
+Start Time:08:00am
+End Time:10:45am
+Location:JD1107
+Instructor:Staff 
+Open Seats:15918
+
+
+Section ID:15917
+Section Name:COMP 100 
+Component:LEC
+Days Of Week:Fr
+Start Time:08:00am
+End Time:10:45am
+Location:JD1105
+Instructor:Staff 
+Open Seats:15917
+
+
+Section ID:15526
+Section Name:COMP 100 
+Component:LEC
+Days Of Week:MoWe
+Start Time:12:30pm
+End Time:01:45pm
+Location:JD1107
+Instructor:Bendavid,Cecile S 
+Open Seats:15526
+
+
+Section ID:15531
+Section Name:COMP 100 
+Component:LEC
+Days Of Week:MoWe
+Start Time:11:00am
+End Time:12:15pm
+Location:JD1105
+Instructor:Staff 
+Open Seats:15531
+
+
+Section ID:15530
+Section Name:COMP 100 
+Component:LEC
+Days Of Week:MoWe
+Start Time:11:00am
+End Time:12:15pm
+Location:JD1107
+Instructor:Bendavid,Cecile S 
+Open Seats:15530
+
+
+Section ID:15527
+Section Name:COMP 100 
+Component:LEC
+Days Of Week:MoWe
+Start Time:09:30am
+End Time:10:45am
+Location:JD1107
+Instructor:Bendavid,Cecile S 
+Open Seats:15527
+
+
+Section ID:15524
+Section Name:COMP 100 
+Component:LEC
+Days Of Week:TuTh
+Start Time:03:30pm
+End Time:04:45pm
+Location:JD1105
+Instructor:Parker,Lucy 
+Open Seats:15524
+
+
+Section ID:15528
+Section Name:COMP 100 
+Component:LEC
+Days Of Week:TuTh
+Start Time:02:00pm
+End Time:03:15pm
+Location:JD1105
+Instructor:Parker,Lucy 
+Open Seats:15528
+
+
+Section ID:15529
+Section Name:COMP 100 
+Component:LEC
+Days Of Week:TuTh
+Start Time:11:00am
+End Time:12:15pm
+Location:JD1107
+Instructor:Bendavid,Cecile S 
+Open Seats:15529
+
+
+Section ID:15630
+Section Name:COMP 100 
+Component:LEC
+Days Of Week:TuTh
+Start Time:11:00am
+End Time:12:15pm
+Location:JD1105
+Instructor:Parker,Lucy 
+Open Seats:15630
+
+
+Section ID:15523
+Section Name:COMP 100 
+Component:LEC
+Days Of Week:TuTh
+Start Time:09:30am
+End Time:10:45am
+Location:JD2215
+Instructor:Staff 
+Open Seats:15523
+
+
+Section ID:15848
+Section Name:COMP 100 
+Component:LEC
+Days Of Week:TuTh
+Start Time:09:30am
+End Time:10:45am
+Location:JD1107
+Instructor:Bendavid,Cecile S 
+Open Seats:15848
+
+
+Section ID:15522
+Section Name:COMP 100 
+Component:LEC
+Days Of Week:TuTh
+Start Time:09:30am
+End Time:10:45am
+Location:JD1105
+Instructor:Parker,Lucy 
+Open Seats:15522
+
