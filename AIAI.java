@@ -66,7 +66,7 @@ class AIAI {
         Major maj = student.getStudentMajor();
         ArrayList<Course> majorReqs = maj.getMajorReqs();
         ArrayList<Course> reqs = findDependencies(majorReqs, gCT);
-        reqs = removeCoursesTaken(reqs,student.getCoursesTaken());
+        reqs = removeCoursesTaken(reqs,student);
         
     /* Step : Topological Sort */
         ArrayList<COP> tentativePlan = topologicalSort(majorReqs, gCT);
@@ -78,9 +78,9 @@ class AIAI {
     /* need to ask Cina to add method to check if course has been taken */
     /* need to test this since it probably won't work as is. */
     private ArrayList<Course> removeCoursesTaken(ArrayList<Course> reqs,
-                    ArrayList<Course> taken) {   
+                    Student stu) {   
         for(Course c : reqs){
-            if(taken.contains(c)){
+            if(stu.courseTaken(c)){
                 reqs.remove(c);
             }
         }
@@ -113,8 +113,8 @@ class AIAI {
             }); 
             /* number when the nodes were taken off the graph */
             /* if the node is not to be taken off the graph reset it */
-            for(  ) {
-            graph.forEach((name , pair) -> {
+            for(String elt: graph.keySet() ) {
+                COP pair = graph.get(elt);
                 if(pair.getInt() == 0){
                     pair.setInt(i);
                     temp.add(pair);
