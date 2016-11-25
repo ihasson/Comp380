@@ -2,7 +2,8 @@ JCC = javac
 JFLAG = -g
 
 #default: Main.class 
-AIAI.class: AIAI.java Course.class Planner.class Section.class Major.class
+AIAI.class: AIAI.java Course.class Planner.class Section.class Major.class \
+			Student.class
 	$(JCC) AIAI.java
 
 AIUnitTests.class: AIUnitTests.java AIAI.class 

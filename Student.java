@@ -45,7 +45,7 @@ public class Student {
 		this.middleInitial = ' ';
 		this.studentMonthOfAdmit = "";
 		this.studentYearOfAdmit = 0;
-		this.studentTransscript = new ArrayList<Course>();
+		this.studentTransscript = new LinkedList<Course>();
 	}//end
 	
 	public Student(String sId, String sFirstName, String sLastName, char sInit){
