@@ -1,5 +1,7 @@
-/* 
- * Izzy Hasson, other NAMES 
+/**
+ * Class: AIAI
+ *
+ * Author: Izzy Hasson
  */
 import java.util.*;
 import java.util.HashMap;
@@ -14,7 +16,7 @@ interface Ai {
 /**
  * The actual AI Class. It figures things out and makes decisions.
  */
-class AIAI {
+public class AIAI {
 /*
  * COP stands for Course Order Pair. It allows one to easily keep track of an 
  * integer to be temporarilly associated with a Cousrse.
@@ -65,7 +67,7 @@ class AIAI {
      * list so that 
      */
     // Later need to check for type consistency and used correct method names
-    public /*static*/ /*Planner*/ void  generatePlanner(Student student, 
+    public  /*Planner*/ void  generatePlanner(Student student, 
             CourseTable gCT){
     /* Step 1: find all needed courses */
         //Planner plan = new Planner();
@@ -83,7 +85,7 @@ class AIAI {
     }
     /* need to ask Cina to add method to check if course has been taken */
     /* need to test this since it probably won't work as is. */
-    private /*static*/ ArrayList<Course> removeCoursesTaken(ArrayList<Course> reqs,
+    private ArrayList<Course> removeCoursesTaken(ArrayList<Course> reqs,
                     Student stu) {   
         for(Course c : reqs){
             if(stu.courseTaken(c)){
@@ -92,7 +94,8 @@ class AIAI {
         }
         return reqs;
     }
-    private /*static*/ ArrayList<COP> topologicalSort(ArrayList<Course> list,
+    /* note that elements of prerequisite list point backwards */
+    private  ArrayList<COP> topologicalSort(ArrayList<Course> list,
                     CourseTable gCT){
     /* Massage data into needed format. */
         LinkedHashMap<String,COP> graph = new LinkedHashMap<>();
@@ -104,35 +107,32 @@ class AIAI {
             graph.put(c.getName(), pair);
         }
         int i = 0;
-        while(graph.size() != 0){
-            ArrayList<COP> temp = new ArrayList<>();
-    /* find nodes with no predessessor */
-            graph.forEach((name, pair) -> { 
-                Course  c = gCT.get(name);
-                ArrayList<String> pReqs = c.getPreRequisites();
-                for(String s : pReqs) {
-                    if(graph.containsKey(s)){
-                        COP something  = graph.get(s);
-                        something.setInt(something.getInt() + 1);
+        while(graph.size() !=0){
+            for(String nodeName: graph.keySet()){
+                COP node = graph.get(nodeName);
+                Course thisnode = gCT.get(nodeName);
+                ArrayList<String> antecedents = thisnode.getPreRequisites();
+                if(antecedents.size() > 0){
+                    for(String pred : antecedents){
+                        if(graph.containsKey(pred)){
+                            node.setInt(1+ node.getInt());
+                        }
                     }
                 }
-            }); 
-            /* number when the nodes were taken off the graph */
-            /* if the node is not to be taken off the graph reset it */
-            for(String elt: graph.keySet() ) {
-                COP pair = graph.get(elt);
-                if(pair.getInt() == 0){
-                    pair.setInt(i);
-                    temp.add(pair);
-                } else {
-                    pair.setInt(0);
+            }
+            LinkedHashMap<String, COP> newgraph = new LinkedHashMap<>();
+            for(String nodeName: graph.keySet()){
+                COP node = graph.get(nodeName);
+                if(node.getInt() == 0){
+                    node.setInt(i);
+                    solution.add(node);    
+                }
+                else{ 
+                    node.setInt(0);
+                    newgraph.put(nodeName, node);
                 }
             }
-            /* take nodes off graph and put them in solution set */
-            for(COP pair : temp){
-                graph.remove(pair.getString());
-                solution.add(pair);
-            }
+            graph = newgraph;
             i++;
         }
         return solution;
@@ -141,7 +141,7 @@ class AIAI {
     /**
      * Finds the dependencies of a course using depth first search
      */
-    public /*static*/ ArrayList<Course> findDependencies(Course c, 
+    public  ArrayList<Course> findDependencies(Course c, 
             CourseTable gCT) {
         LinkedHashMap<String, COP> cList = 
             new LinkedHashMap<String, COP>();
@@ -160,7 +160,7 @@ class AIAI {
      * Also finds dependencies but from an array of courses.
      * Note that it returns an array of COP because I need the ordering.
      */
-    public /*static*/ ArrayList<Course> findDependencies(
+    public  ArrayList<Course> findDependencies(
                         ArrayList<Course> courseList, CourseTable gCT) {
         ArrayList<Course> solution = new ArrayList<>();
         LinkedHashMap<String,COP> cList = new LinkedHashMap<>();
@@ -175,7 +175,7 @@ class AIAI {
     /*
      * A helper to the other methods of the same name.
      */
-    private /*static*/ void findDependencies(Course c, 
+    private  void findDependencies(Course c, 
             LinkedHashMap<String,COP> cList, int depth, CourseTable gCT) {
         if(cList.containsKey(c.getName())){
             return;
@@ -193,12 +193,12 @@ class AIAI {
             }
         }
     }
-    public /*static*/ void topSortTest(ArrayList<Course> list){
+    public  void topSortTest(ArrayList<Course> list){
         CourseTable  gCT = new CourseTable(list);
         ArrayList<COP> solution = topologicalSort(list, gCT);
-        System.out.println("Higher num means take it sooner.");
+        System.out.println("");
         for(COP c: solution){
-            System.out.println(c.getString() + " semester num "+ c.getInt());
+            System.out.println(c.getString() + " semester "+ c.getInt());
         }
     }
 }
