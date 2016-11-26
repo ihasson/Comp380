@@ -16,7 +16,8 @@ class Course {
     //need
     private ArrayList<String> preRequisites; //Need
 
-    Course(String name, int unitAmount){
+    Course(String name, int unitAmount, int dif){
+        difficulty = dif;
         courseName = name;
         units = unitAmount;
         preRequisites = new ArrayList<>();

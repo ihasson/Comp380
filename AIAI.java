@@ -22,7 +22,7 @@ class AIAI {
     class COP implements Comparable{
         private String s; //maybe change to Course
         private int i;
-        COP(String string, int integer){
+        public  COP(String string, int integer){
             s = string;
             i = integer;
         }
@@ -35,7 +35,7 @@ class AIAI {
         public void setInt(int a){
             i=a;
         }
-        public int compareTo(Object o) throws ClassCastException{
+        public  int compareTo(Object o) throws ClassCastException{
             if(!(o instanceof COP)){
                 throw new ClassCastException("object not COP");
             }
@@ -53,6 +53,12 @@ class AIAI {
         public Course get(String s){
             return gCT.get(s);
         }
+    }
+    /**
+     * A constructor that does nothing so that you can call methods.
+     */
+    public AIAI(){
+        ;
     }
     /**
      * This determines what courses are needed and puts them into an ordered
@@ -77,7 +83,7 @@ class AIAI {
     }
     /* need to ask Cina to add method to check if course has been taken */
     /* need to test this since it probably won't work as is. */
-    private ArrayList<Course> removeCoursesTaken(ArrayList<Course> reqs,
+    private /*static*/ ArrayList<Course> removeCoursesTaken(ArrayList<Course> reqs,
                     Student stu) {   
         for(Course c : reqs){
             if(stu.courseTaken(c)){
@@ -87,7 +93,7 @@ class AIAI {
         return reqs;
     }
     private /*static*/ ArrayList<COP> topologicalSort(ArrayList<Course> list,
-            CourseTable gCT){
+                    CourseTable gCT){
     /* Massage data into needed format. */
         LinkedHashMap<String,COP> graph = new LinkedHashMap<>();
         ArrayList<COP> solution = new ArrayList<>();       
@@ -185,6 +191,14 @@ class AIAI {
                     //need to know the name of the global Course Table
                 }
             }
+        }
+    }
+    public /*static*/ void topSortTest(ArrayList<Course> list){
+        CourseTable  gCT = new CourseTable(list);
+        ArrayList<COP> solution = topologicalSort(list, gCT);
+        System.out.println("Higher num means take it sooner.");
+        for(COP c: solution){
+            System.out.println(c.getString() + " semester num "+ c.getInt());
         }
     }
 }
