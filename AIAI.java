@@ -1,7 +1,3 @@
-/* 
- * Note to Prof. Lingard,
- * grade topologicalSort();
- */
 /**
  * Class: AIAI
  * 
@@ -100,10 +96,6 @@ public class AIAI {
         return reqs;
     }
 
-/* 
- * Note to Prof. Lingard,
- * this is the method to grade.
- */
 /*
  * topologicalSort() sorts the courses of the course as follows:
  * Let the list of Courses passed to this method be a directed 
@@ -116,7 +108,9 @@ public class AIAI {
  * graph.
  * The algorithm repeats until there are no more nodes in the graph.
  */
-/* note that elements of prerequisite list point backwards */
+/* note that elements of prerequisite list represent edges pointing
+ * AWAY from the prerequisite.
+ * */
     private  ArrayList<COP> topologicalSort(ArrayList<Course> list,
                     CourseTable gCT){
     /* 
@@ -220,10 +214,10 @@ public class AIAI {
         }
     }
     
-    /**
-     * This method exists for the sole purpose of testing topologicalSort().
-     * It runs the method and prints the out put.
-     */
+/**
+ * This method exists for the sole purpose of testing topologicalSort().
+ * It runs the method and prints the out put.
+ */
     public void topSortTest(ArrayList<Course> list){
         CourseTable  gCT = new CourseTable(list);
         ArrayList<COP> solution = topologicalSort(list, gCT);
