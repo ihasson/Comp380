@@ -5,7 +5,7 @@ import java.util.*;
 /**
  * Provides a container for information on a course offered at CSUN.
  */
-class Course {
+public class Course {
     private String subject; //don't need
     private String number; //don't need
     private Integer courseID; //don't need
