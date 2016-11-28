@@ -1,0 +1,225 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+<title>Source code</title>
+<link rel="stylesheet" type="text/css" href="../stylesheet.css" title="Style">
+</head>
+<body>
+<div class="sourceContainer">
+<pre><span class="sourceLineNo">001</span><a name="line.1">/*******************************************************************************</a>
+<span class="sourceLineNo">002</span><a name="line.2"></a>
+<span class="sourceLineNo">003</span><a name="line.3">Name of Module: PlannerUnit</a>
+<span class="sourceLineNo">004</span><a name="line.4"></a>
+<span class="sourceLineNo">005</span><a name="line.5">Purpose:    Creates the data structure to hold planner information for a</a>
+<span class="sourceLineNo">006</span><a name="line.6">            specific semester + year combination (e.g. Fall 2017)</a>
+<span class="sourceLineNo">007</span><a name="line.7"></a>
+<span class="sourceLineNo">008</span><a name="line.8">Inputs:     String Semester, Int Year</a>
+<span class="sourceLineNo">009</span><a name="line.9">            Used to ensure courses are stored in the proper unit; if no</a>
+<span class="sourceLineNo">010</span><a name="line.10">            unit exists, a new one is created</a>
+<span class="sourceLineNo">011</span><a name="line.11"></a>
+<span class="sourceLineNo">012</span><a name="line.12">Outputs:    PlannerUnit plannerUnit</a>
+<span class="sourceLineNo">013</span><a name="line.13">            a planner unit for a LinkedUnit which is, in turn, for a Planner</a>
+<span class="sourceLineNo">014</span><a name="line.14"></a>
+<span class="sourceLineNo">015</span><a name="line.15">Submodules: None</a>
+<span class="sourceLineNo">016</span><a name="line.16"></a>
+<span class="sourceLineNo">017</span><a name="line.17"></a>
+<span class="sourceLineNo">018</span><a name="line.18">Author:     Andrea Lee</a>
+<span class="sourceLineNo">019</span><a name="line.19">Date:       11/13/16</a>
+<span class="sourceLineNo">020</span><a name="line.20"></a>
+<span class="sourceLineNo">021</span><a name="line.21">Reviewer:   ???</a>
+<span class="sourceLineNo">022</span><a name="line.22">Date:       ???</a>
+<span class="sourceLineNo">023</span><a name="line.23"></a>
+<span class="sourceLineNo">024</span><a name="line.24"></a>
+<span class="sourceLineNo">025</span><a name="line.25">Revision History:</a>
+<span class="sourceLineNo">026</span><a name="line.26">            Programmer:</a>
+<span class="sourceLineNo">027</span><a name="line.27">            Date:</a>
+<span class="sourceLineNo">028</span><a name="line.28">            Description of Change:</a>
+<span class="sourceLineNo">029</span><a name="line.29">            Reviewer:</a>
+<span class="sourceLineNo">030</span><a name="line.30">            Date of Review:</a>
+<span class="sourceLineNo">031</span><a name="line.31"></a>
+<span class="sourceLineNo">032</span><a name="line.32">*******************************************************************************/</a>
+<span class="sourceLineNo">033</span><a name="line.33"></a>
+<span class="sourceLineNo">034</span><a name="line.34"></a>
+<span class="sourceLineNo">035</span><a name="line.35"></a>
+<span class="sourceLineNo">036</span><a name="line.36"></a>
+<span class="sourceLineNo">037</span><a name="line.37">public class PlannerUnit {</a>
+<span class="sourceLineNo">038</span><a name="line.38">    // attributes stored in the class</a>
+<span class="sourceLineNo">039</span><a name="line.39">    private String semester;</a>
+<span class="sourceLineNo">040</span><a name="line.40">    private int year;</a>
+<span class="sourceLineNo">041</span><a name="line.41">    private int maxUnits;</a>
+<span class="sourceLineNo">042</span><a name="line.42">    private int difficultyRating;</a>
+<span class="sourceLineNo">043</span><a name="line.43">    //private LinkedList&lt;Course&gt; allCourses;</a>
+<span class="sourceLineNo">044</span><a name="line.44">    </a>
+<span class="sourceLineNo">045</span><a name="line.45">    private PlannerUnit prev;</a>
+<span class="sourceLineNo">046</span><a name="line.46">    private PlannerUnit next;</a>
+<span class="sourceLineNo">047</span><a name="line.47">    </a>
+<span class="sourceLineNo">048</span><a name="line.48">    // constructor</a>
+<span class="sourceLineNo">049</span><a name="line.49">    public PlannerUnit(String s, int n) {</a>
+<span class="sourceLineNo">050</span><a name="line.50">        semester = s;</a>
+<span class="sourceLineNo">051</span><a name="line.51">        year = n;</a>
+<span class="sourceLineNo">052</span><a name="line.52">        maxUnits = 13;</a>
+<span class="sourceLineNo">053</span><a name="line.53">        difficultyRating = 0;</a>
+<span class="sourceLineNo">054</span><a name="line.54">        //allCourses = new LinkedList();</a>
+<span class="sourceLineNo">055</span><a name="line.55">    }</a>
+<span class="sourceLineNo">056</span><a name="line.56">    </a>
+<span class="sourceLineNo">057</span><a name="line.57">    // getters and setters</a>
+<span class="sourceLineNo">058</span><a name="line.58">    public String getSemester() {</a>
+<span class="sourceLineNo">059</span><a name="line.59">        return semester;</a>
+<span class="sourceLineNo">060</span><a name="line.60">    }</a>
+<span class="sourceLineNo">061</span><a name="line.61">    </a>
+<span class="sourceLineNo">062</span><a name="line.62">    public int getYear() {</a>
+<span class="sourceLineNo">063</span><a name="line.63">        return year;</a>
+<span class="sourceLineNo">064</span><a name="line.64">    }</a>
+<span class="sourceLineNo">065</span><a name="line.65">    </a>
+<span class="sourceLineNo">066</span><a name="line.66">    public int getMaxUnits() {</a>
+<span class="sourceLineNo">067</span><a name="line.67">        return maxUnits;</a>
+<span class="sourceLineNo">068</span><a name="line.68">    }</a>
+<span class="sourceLineNo">069</span><a name="line.69">    </a>
+<span class="sourceLineNo">070</span><a name="line.70">    public int getDifficultyRating() {</a>
+<span class="sourceLineNo">071</span><a name="line.71">        return difficultyRating;</a>
+<span class="sourceLineNo">072</span><a name="line.72">    }</a>
+<span class="sourceLineNo">073</span><a name="line.73">    </a>
+<span class="sourceLineNo">074</span><a name="line.74">    /*</a>
+<span class="sourceLineNo">075</span><a name="line.75">    public LinkedList getAllCourses() {</a>
+<span class="sourceLineNo">076</span><a name="line.76">        return allCourses;</a>
+<span class="sourceLineNo">077</span><a name="line.77">    }</a>
+<span class="sourceLineNo">078</span><a name="line.78">    */</a>
+<span class="sourceLineNo">079</span><a name="line.79">    </a>
+<span class="sourceLineNo">080</span><a name="line.80">    public PlannerUnit getPrev() {</a>
+<span class="sourceLineNo">081</span><a name="line.81">        return prev;</a>
+<span class="sourceLineNo">082</span><a name="line.82">    }</a>
+<span class="sourceLineNo">083</span><a name="line.83">    </a>
+<span class="sourceLineNo">084</span><a name="line.84">    public PlannerUnit getNext() {</a>
+<span class="sourceLineNo">085</span><a name="line.85">        return next;</a>
+<span class="sourceLineNo">086</span><a name="line.86">    }</a>
+<span class="sourceLineNo">087</span><a name="line.87">    </a>
+<span class="sourceLineNo">088</span><a name="line.88">    public void setSemester(String n) {</a>
+<span class="sourceLineNo">089</span><a name="line.89">        semester = n;</a>
+<span class="sourceLineNo">090</span><a name="line.90">    }</a>
+<span class="sourceLineNo">091</span><a name="line.91">    </a>
+<span class="sourceLineNo">092</span><a name="line.92">    public void setYear(int n) {</a>
+<span class="sourceLineNo">093</span><a name="line.93">        year = n;</a>
+<span class="sourceLineNo">094</span><a name="line.94">    }</a>
+<span class="sourceLineNo">095</span><a name="line.95">    </a>
+<span class="sourceLineNo">096</span><a name="line.96">    public void setMaxUnits(int n) {</a>
+<span class="sourceLineNo">097</span><a name="line.97">        maxUnits = n;</a>
+<span class="sourceLineNo">098</span><a name="line.98">    }</a>
+<span class="sourceLineNo">099</span><a name="line.99">    </a>
+<span class="sourceLineNo">100</span><a name="line.100">    public void setDifficultyRating(int n) {</a>
+<span class="sourceLineNo">101</span><a name="line.101">        difficultyRating = n;</a>
+<span class="sourceLineNo">102</span><a name="line.102">    }</a>
+<span class="sourceLineNo">103</span><a name="line.103">    </a>
+<span class="sourceLineNo">104</span><a name="line.104">    /*</a>
+<span class="sourceLineNo">105</span><a name="line.105">    public void setAllCourses(LinkedList n) {</a>
+<span class="sourceLineNo">106</span><a name="line.106">        allCourses = n;</a>
+<span class="sourceLineNo">107</span><a name="line.107">    }</a>
+<span class="sourceLineNo">108</span><a name="line.108">    */</a>
+<span class="sourceLineNo">109</span><a name="line.109"></a>
+<span class="sourceLineNo">110</span><a name="line.110">    public void setPrev(PlannerUnit n) {</a>
+<span class="sourceLineNo">111</span><a name="line.111">        prev = n;</a>
+<span class="sourceLineNo">112</span><a name="line.112">    }</a>
+<span class="sourceLineNo">113</span><a name="line.113">    </a>
+<span class="sourceLineNo">114</span><a name="line.114">    public void setNext(PlannerUnit n) {</a>
+<span class="sourceLineNo">115</span><a name="line.115">        next = n;</a>
+<span class="sourceLineNo">116</span><a name="line.116">    }</a>
+<span class="sourceLineNo">117</span><a name="line.117">    </a>
+<span class="sourceLineNo">118</span><a name="line.118">    // functions</a>
+<span class="sourceLineNo">119</span><a name="line.119">    // adds, removes, or swaps a course within the unit</a>
+<span class="sourceLineNo">120</span><a name="line.120">    /*</a>
+<span class="sourceLineNo">121</span><a name="line.121">    public void addCourse(int courseID) {</a>
+<span class="sourceLineNo">122</span><a name="line.122">        allCourses.addLast(courseID);</a>
+<span class="sourceLineNo">123</span><a name="line.123">    }</a>
+<span class="sourceLineNo">124</span><a name="line.124">    </a>
+<span class="sourceLineNo">125</span><a name="line.125">    public void removeCourse (int courseID) {</a>
+<span class="sourceLineNo">126</span><a name="line.126">        allCourses.remove(allCourses.find(courseID));</a>
+<span class="sourceLineNo">127</span><a name="line.127">    }</a>
+<span class="sourceLineNo">128</span><a name="line.128">    </a>
+<span class="sourceLineNo">129</span><a name="line.129">    public void swapCourses (int addCourseID, int deleteCourseID) {</a>
+<span class="sourceLineNo">130</span><a name="line.130">        allCourses.remove(allCourses.find(deleteCourseID));</a>
+<span class="sourceLineNo">131</span><a name="line.131">        allCourses.addLast(addCourseID);</a>
+<span class="sourceLineNo">132</span><a name="line.132">    }</a>
+<span class="sourceLineNo">133</span><a name="line.133">    */</a>
+<span class="sourceLineNo">134</span><a name="line.134">    </a>
+<span class="sourceLineNo">135</span><a name="line.135">    // provides a sorting value, with a smaller number indicating an</a>
+<span class="sourceLineNo">136</span><a name="line.136">    // earlier sort</a>
+<span class="sourceLineNo">137</span><a name="line.137">    public int sortValue() {</a>
+<span class="sourceLineNo">138</span><a name="line.138">        int value;</a>
+<span class="sourceLineNo">139</span><a name="line.139">        value = year*4;</a>
+<span class="sourceLineNo">140</span><a name="line.140">        </a>
+<span class="sourceLineNo">141</span><a name="line.141">        if(semester.equals("SPRING"))</a>
+<span class="sourceLineNo">142</span><a name="line.142">            value = value+0;</a>
+<span class="sourceLineNo">143</span><a name="line.143">        else if (semester.equals("SUMMER"))</a>
+<span class="sourceLineNo">144</span><a name="line.144">            value = value+1;</a>
+<span class="sourceLineNo">145</span><a name="line.145">        else if (semester.equals("FALL"))</a>
+<span class="sourceLineNo">146</span><a name="line.146">            value = value+2;</a>
+<span class="sourceLineNo">147</span><a name="line.147">        else</a>
+<span class="sourceLineNo">148</span><a name="line.148">            value = value+3;</a>
+<span class="sourceLineNo">149</span><a name="line.149">        </a>
+<span class="sourceLineNo">150</span><a name="line.150">        return value;</a>
+<span class="sourceLineNo">151</span><a name="line.151">    }</a>
+<span class="sourceLineNo">152</span><a name="line.152">    </a>
+<span class="sourceLineNo">153</span><a name="line.153">}</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</div>
+</body>
+</html>

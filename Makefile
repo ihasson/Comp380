@@ -1,7 +1,15 @@
 JCC = javac
 JFLAG = -g
+AI = AIAI.java Course.java Planner.java Section.java Major.java \
+	 Planner.java PlannerUnit.java Student.java 
 
-#default: Main.class 
+UI = LeftPanel.java MainFrame.java Options.java RightPanel.java #App.java
+	 
+TEST = AIUnitTests.java  
+OTHER = CsSectionsTextfileUpdater.java
+#DATA = open_seats.txt spring_2017_cs_sections.txt cs_sections.txt \
+		OutputForSectionUnitTest.txt
+
 AIAI.class: AIAI.java Course.class Planner.class Section.class Major.class \
 			Student.class
 	$(JCC) AIAI.java
@@ -27,9 +35,16 @@ Major.class: Major.java
 Student.class: Student.java
 	$(JCC) Student.java
 
+#UI:
+
+testcompile: $(AI) $(UI) $(TEST) $(OTHER) 
+	$(JCC) $(TEST)
+
 format: 
 	uncrustify -c uncrustify.cfg Course.java --no-backup
-documentation: AIAI.java Section.java Planner.java Course.java  
-	javadoc -d documentation *java
+
+docs:
+	$(MAKE) -C documentation
+
 clean:
 	$(RM) *.class
