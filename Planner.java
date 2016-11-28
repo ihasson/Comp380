@@ -1,4 +1,4 @@
-/*******************************************************************************
+/*
 
 Name of Module: Planner
 
@@ -28,9 +28,10 @@ Revision History:
             Reviewer:
             Date of Review:
 
-*******************************************************************************/
+*/
 
 
+//package planner;
 import java.io.*;
 import java.util.*;
 
@@ -130,7 +131,7 @@ public class Planner {
         // reads the hoursSurveyData text file to record total hours estimated
         // as well as the number of data points
         // ultimately used to calculate the average, using total/count
-        File hoursFile = new File("C:\\Users\\Andrea Lee\\Documents\\NetBeansProjects\\Planner\\hoursSurveyData.txt");
+        File hoursFile = new File("C:\\Users\\Andrea Lee\\Documents\\NetBeansProjects\\Planner\\2hoursSurveyData.txt");
         Scanner hoursInput = new Scanner(hoursFile);
 
         while (hoursInput.hasNextLine()) {
@@ -139,6 +140,10 @@ public class Planner {
             semester = hoursInput.next();
             year = hoursInput.next();
             hoursPerWeek = hoursInput.next();
+            // a number of these variables aren't used in this code; however,
+            // they have been kept for use in the future (e.g. filtering
+            // to only take data from the past 3 years, or something of
+            // that nature)
             
             if (cID.equals(courseID))
             {
@@ -153,7 +158,7 @@ public class Planner {
         // with an A being 4.00, a B being 3.00, and so forth
         // as well as the number of data points
         // ultimately used to calculate the average, using total/count
-        File gradeFile = new File("C:\\Users\\Andrea Lee\\Documents\\NetBeansProjects\\Planner\\gradeDistribution.txt");
+        File gradeFile = new File("C:\\Users\\Andrea Lee\\Documents\\NetBeansProjects\\Planner\\2gradeDistribution.txt");
         Scanner gradeInput = new Scanner(gradeFile);
 
         while (gradeInput.hasNextLine()) {
@@ -162,6 +167,9 @@ public class Planner {
             semester = gradeInput.next();
             year = gradeInput.next();
             grade = gradeInput.next();
+            
+            // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            System.out.println(ID + " " + courseID + " " + semester + " " + year + " " + grade);
             
             if (cID.equals(courseID))
             {
@@ -205,9 +213,9 @@ public class Planner {
                 }
                 else {
                     totalGrade = totalGrade + 0.00;
-                }
-            }
-        }
+                } // end if
+            } // end if
+        } // end while
         
         gradeInput.close();
         
@@ -215,18 +223,26 @@ public class Planner {
         // available, with average hours defaulting to the course's unit
         // count, and average grade defaulting to a C, or 2.00
         if (totalHours > 0) {
-            avgHours = totalHours/countHours;
+            avgHours = totalHours/(countHours*1.0);
         }
         else {
             //avgHours = course.getUnit(cID);
+            // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            avgHours = 3;
         }
         
         if (totalGrade > 0) {
-            avgGrade = totalGrade/countGrade;
+            avgGrade = totalGrade/(countGrade*1.0);
         }
         else {
             avgGrade = 2.00;
         }
+        
+        // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        System.out.println();
+        System.out.println("TotalHours: " + totalHours + "\t\tCountHours: " + countHours + "\t\tAvgHours: " + avgHours);
+        System.out.println("TotalGrade: " + totalGrade + "\tCountGrade: " + countGrade + "\t\tAvgGrade: " + avgGrade);
+        System.out.println("Final Rating: " + avgHours/avgGrade);
         
         return avgHours/avgGrade;
     } // end calculateDifficultyRating
@@ -295,7 +311,7 @@ public class Planner {
         //--------------------------------------------------------------------//
         
         Planner t = new Planner();
-        t.calculateDifficultyRating("1000");
+        t.calculateDifficultyRating("COMP182");
     
     } // end main
     

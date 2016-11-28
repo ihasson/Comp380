@@ -1,4 +1,4 @@
-/*******************************************************************************
+/*
 
 Name of Module: PlannerUnit
 
@@ -29,9 +29,10 @@ Revision History:
             Reviewer:
             Date of Review:
 
-*******************************************************************************/
+*/
 
 
+//package planner;
 
 
 public class PlannerUnit {
