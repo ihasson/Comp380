@@ -14,12 +14,7 @@ public class Options extends JPanel {
 		view = new JButton("View Schedule");
 		changeMajor = new JButton("Change Major");
 		exit = new JButton("EXIT");
-		
-		genSchedule.setAlignmentX(CENTER_ALIGNMENT);
-		view.setAlignmentX(CENTER_ALIGNMENT);
-		changeMajor.setAlignmentX(CENTER_ALIGNMENT);
-		exit.setAlignmentX(CENTER_ALIGNMENT);
-		
+				
 		add(genSchedule);
 		add(view);
 		add(changeMajor);
