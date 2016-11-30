@@ -8,8 +8,6 @@ Submodules: SectionLinkedList.java, Section.java
 Author: Michael Harootoonyan
 Date:   Nov 23, 2016
 ****************************************************************************************/
-package team6;
-
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -74,10 +72,11 @@ public class SectionUnitTest {
 						}
 						break;
 					case 0:
-						while( i < str.length() && Character.isDigit(str.charAt(i)) ) 
+						int j = str.length()-1;
+						while(Character.isDigit(str.charAt(j)) ) 
 						{
-							open_seats+= str.charAt(i);
-							i++;
+							open_seats += str.charAt(i);
+							i--;
 						}
 				}
 				
