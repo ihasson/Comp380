@@ -1,3 +1,4 @@
+package Team6;
 /****************************************************************************************
 Name of Module:SectionUnitTest.java
  
@@ -41,7 +42,7 @@ public class SectionUnitTest {
 		String  instructor="";
 		String  open_seats="";
 		
-		int 	permits   = 6;
+		int 	permits   = 5;
 		
 		for(int i = 0; i < str.length(); i++)
 		{
@@ -49,35 +50,28 @@ public class SectionUnitTest {
 			{
 				switch(permits)
 				{
-					case 6: 
+					case 5: 
 						sectionID += str.charAt(i);
 						break;
-					case 5:
+					case 4:
 						component += str.charAt(i);
 						break;
-					case 4:
+					case 3:
 						location  += str.charAt(i);
 						break;
-					case 3:
+					case 2:
 						daysOfWk  += str.charAt(i);
 						break;
-					case 2:
+					case 1:
 						time += str.charAt(i);
 						break;
-					case 1:
+					case 0:
 						while( i < str.length() && !Character.isDigit(str.charAt(i)) ) 
 						{
 							instructor+= str.charAt(i);
 							i++;
 						}
 						break;
-					case 0:
-						int j = str.length()-1;
-						while(Character.isDigit(str.charAt(j)) ) 
-						{
-							open_seats += str.charAt(i);
-							i--;
-						}
 				}
 				
 			} else
@@ -100,11 +94,21 @@ public class SectionUnitTest {
 			i++;
 		}
 		
-			
+		int strlength = str.length();
+		
+		
+		if ( str.charAt(strlength-2) != ' ')
+		{
+			open_seats += str.charAt(strlength-2);
+		}
+		if ( str.charAt(strlength-1) != ' ')
+		open_seats += str.charAt(strlength-1);
+
+		
 		section.setSectionID(Integer.parseInt(sectionID));			
 		section.setComponent(component);
 		section.setInstructor(instructor);
-		section.setSeatsOpen(Integer.parseInt(sectionID));
+		section.setSeatsOpen(Integer.parseInt(open_seats));
 		section.setStartTime(startTime);
 		section.setEndTime(endTime);
 		section.setLocation(location);
