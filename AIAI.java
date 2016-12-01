@@ -8,14 +8,17 @@ import java.util.*;
 
 /**
  * The actual AI Class. It figures things out and makes decisions.
+ * <p>
+ * <img src="doc-files/AIAI-1.png" alt="topological sort">
+ * <img src="doc-files/AIAI-2.png" alt="topological sort">  
  */
 public class AIAI {
 
-/*
+/**
  * COP stands for Course Order Pair. It allows one to easily keep track of an 
- * integer to be temporarilly associated with a Cousrse.
+ * integer to be temporarilly associated with a Course.
  */
-    class COP implements Comparable{
+   protected class COP implements Comparable{
         private String s; //maybe change to Course
         private int i;
         public  COP(String string, int integer){
@@ -40,11 +43,11 @@ public class AIAI {
         }
     }
 
-/*
+/**
  * A simple inner class to make things easier and fake having
  * actual global variables.
  */
-    class CourseTable {
+   protected class CourseTable {
         private HashMap<String, Course>  gCT = new HashMap<>();
         CourseTable(ArrayList<Course> list){
             for(Course c : list){
@@ -63,27 +66,86 @@ public class AIAI {
         ;
     }
 //This is still a work in progress.
-    /**
-     * This determines what courses are needed and puts them into an ordered
-     * list so that 
-     */
-    // Later need to check for type consistency and used correct method names
-    public  /*Planner*/ void  generatePlanner(Student student, 
-            CourseTable gCT){
-    /* Step 1: find all needed courses */
-        //Planner plan = new Planner();
+/**
+ * This determines what courses are needed and puts them into a Planner. 
+ * The difficulty when using this method has no reasonable limit.
+ * <p>
+ * @param   Student The student information.
+ * @param   gCT the Fake Global Course Table.
+ * @return  Planner.
+ */
+    public Planner generatePlanner(Student student, CourseTable gCT){
+        return generatePlanner(student, gCT, 9001);
+    }
+/**
+ * This determines what courses are needed and puts them into a Planner. 
+ * <p>
+ * @param   Student The student information.
+ * @param   gCT the Fake Global Course Table.
+ * @param   paramSource figure out limitations on how much work the student
+ *          should do from this.
+ * @return  Planner.
+ */
+    public Planner generatePlanner(Student student, CourseTable gCT, 
+                    Planner paramSource){
+        int defaultDifficulty = 48; // for now will not use.
+        if(paramSource.getSemesterCount() == 0){
+            return generatePlanner(student, gCT, 9001);
+        } else {
+            //For now do the same thing either way.
+            return generatePlanner(student, gCT, 9001);
+        }
+    }            
+/**
+ * This determines what courses are needed and puts them into a Planner. 
+ * <p>
+ * @param   Student The student information.
+ * @param   gCT the Fake Global Course Table.
+ * @param   maxDifficulty takes as input maximum difficulty value.
+ * @return  Planner.
+ */
+    public Planner generatePlanner(Student student, CourseTable gCT, 
+                    int maxDifficulty){
+        int semNumb = 0;
+        Planner plan = new Planner();
         Major maj = student.getStudentMajor();
         ArrayList<Course> majorReqs = maj.getMajorReqs();
         ArrayList<Course> reqs = findDependencies(majorReqs, gCT);
-        reqs = removeCoursesTaken(reqs,student);
-        
-    /* Step : Topological Sort */
-        ArrayList<COP> tentativePlan = topologicalSort(majorReqs, gCT);
-    /* Step : transform the tentative plan into a firm plan */
-
-    /* Step : Massage data into output format. */
-        //return plan;
+        reqs = removeCoursesTaken(reqs,student);      
+        return genPlan(reqs, gCT, semNumb, maxDifficulty, plan);
     }
+    public Planner genPlan(ArrayList<Course> courses, CourseTable gCT,
+                    int maxDifficulty, int semNumb, Planner plan){
+        if(courses.isEmpty()){ 
+            return plan;
+        }else{            
+            int curDifficulty = 0;
+            ArrayList<COP> tentativePlan = topologicalSort(courses, gCT);
+            String semester = new String("Semester " + semNumb);
+            PlannerUnit curSem = new PlannerUnit(semester, maxDifficulty);
+            ArrayList<Course> restOfCourses = new ArrayList<>();
+            
+            for(ListIterator<COP> li = tentativePlan.listIterator();
+                    li.hasNext();){
+                COP c = li.next();
+                Course curCour = gCT.get(c.getString());
+                
+                if((c.getInt() == 0) && 
+                        (curCour.getDifficulty() + curDifficulty <= 
+                         maxDifficulty)){
+                    curSem.addCourse(curCour);
+                    li.remove();
+                    curDifficulty += curCour.getDifficulty();
+                } else {
+                    restOfCourses.add(curCour);
+                }                    
+            }
+            plan.addPlannerUnit(curSem);
+            return genPlan(restOfCourses, gCT, 
+                            maxDifficulty, semNumb++, plan);
+        }           
+    }
+
     // need to make sure Sina tested his check course taken method properly
     // need to test this since it probably won't work as is. 
     private ArrayList<Course> removeCoursesTaken(ArrayList<Course> reqs,
@@ -95,8 +157,10 @@ public class AIAI {
         }
         return reqs;
     }
-
-/*
+/**
+ * <img src="doc-files/AIAI-2.png" alt="topological sort">
+ */
+/**
  * topologicalSort() sorts the courses of the course as follows:
  * Let the list of Courses passed to this method be a directed 
  * acyclic graph with each Course object in that list being a node.
@@ -107,11 +171,19 @@ public class AIAI {
  * each node. Then it removes all nodes with no antecedents from the 
  * graph.
  * The algorithm repeats until there are no more nodes in the graph.
+ * 
+ * @param list  The courses to be sorted by order the courses can be taken.
+ * @param gCT   A master lookup table of courses.
+ * @return      The courses each paired with a number indicating ordering.
+ * @see         COP
+ * <p>
+ *
+ * <img src="doc-files/AIAI-1.png" alt="topological sort">
  */
 /* note that elements of prerequisite list represent edges pointing
  * AWAY from the prerequisite.
  * */
-    private  ArrayList<COP> topologicalSort(ArrayList<Course> list,
+    protected ArrayList<COP> topologicalSort(ArrayList<Course> list,
                     CourseTable gCT){
     /* 
      * Massage data into needed format. 
@@ -221,7 +293,6 @@ public class AIAI {
     public void topSortTest(ArrayList<Course> list){
         CourseTable  gCT = new CourseTable(list);
         ArrayList<COP> solution = topologicalSort(list, gCT);
-        System.out.println("");
         for(COP c: solution){
             System.out.println(c.getString() + " semester "+ c.getInt());
         }
