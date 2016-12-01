@@ -6,7 +6,7 @@ Start Time:07:00pm
 End Time:09:45pm
 Location:JD3508
 Instructor:Noga,John J 
-Open Seats:15560
+Open Seats:23
 
 
 Section ID:15634
@@ -17,7 +17,7 @@ Start Time:02:00pm
 End Time:04:45pm
 Location:JD1602
 Instructor:Wiegley,Jeffrey 
-Open Seats:15634
+Open Seats:9
 
 
 Section ID:20200
@@ -28,7 +28,7 @@ Start Time:12:00pm
 End Time:01:15pm
 Location:JD1618
 Instructor:Nahapetian,Ani 
-Open Seats:20200
+Open Seats:25
 
 
 Section ID:20199
@@ -39,7 +39,7 @@ Start Time:11:00am
 End Time:11:50am
 Location:JD1618
 Instructor:Nahapetian,Ani 
-Open Seats:20199
+Open Seats:25
 
 
 Section ID:16075
@@ -50,7 +50,7 @@ Start Time:07:00pm
 End Time:09:45pm
 Location:JD3510
 Instructor:Staff 
-Open Seats:16075
+Open Seats:21
 
 
 Section ID:15976
@@ -61,7 +61,7 @@ Start Time:05:00pm
 End Time:06:15pm
 Location:JD3508
 Instructor:Staff 
-Open Seats:15976
+Open Seats:15
 
 
 Section ID:15926
@@ -72,7 +72,7 @@ Start Time:02:00pm
 End Time:03:15pm
 Location:JD2211
 Instructor:Wang,Taehyung 
-Open Seats:15926
+Open Seats:13
 
 
 Section ID:15710
@@ -83,7 +83,7 @@ Start Time:03:30pm
 End Time:04:45pm
 Location:JD3510
 Instructor:Barnes,Mike 
-Open Seats:15710
+Open Seats:22
 
 
 Section ID:16073
@@ -94,7 +94,7 @@ Start Time:09:30am
 End Time:10:45am
 Location:JD2211
 Instructor:Wang,Taehyung 
-Open Seats:16073
+Open Seats:8
 
 
 Section ID:19737
@@ -105,7 +105,7 @@ Start Time:07:00pm
 End Time:09:45pm
 Location:JD1618
 Instructor:Pournaghshband,Vahab 
-Open Seats:19737
+Open Seats:22
 
 
 Section ID:20079
@@ -116,7 +116,7 @@ Start Time:11:00am
 End Time:12:15pm
 Location:JD3508
 Instructor:Schwartz,Diane L 
-Open Seats:20079
+Open Seats:15
 
 
 Section ID:20078
@@ -127,7 +127,7 @@ Start Time:08:00am
 End Time:09:15am
 Location:JD3508
 Instructor:Schwartz,Diane L 
-Open Seats:20078
+Open Seats:18
 
 
 Section ID:19735
@@ -138,7 +138,7 @@ Start Time:05:00pm
 End Time:06:15pm
 Location:JD2211
 Instructor:Staff 
-Open Seats:19735
+Open Seats:19
 
 
 Section ID:19734
@@ -149,7 +149,7 @@ Start Time:12:30pm
 End Time:01:45pm
 Location:JD2211
 Instructor:Staff 
-Open Seats:19734
+Open Seats:10
 
 
 Section ID:16226
@@ -160,7 +160,7 @@ Start Time:11:00am
 End Time:12:15pm
 Location:JD2211
 Instructor:Staff 
-Open Seats:16226
+Open Seats:11
 
 
 Section ID:16014
@@ -171,7 +171,7 @@ Start Time:11:00am
 End Time:12:15pm
 Location:EU103
 Instructor:Wiegley,Jeffrey 
-Open Seats:16014
+Open Seats:8
 
 
 Section ID:15852
@@ -182,7 +182,7 @@ Start Time:08:00am
 End Time:09:15am
 Location:JD2211
 Instructor:Fitzgerald,Steven M 
-Open Seats:15852
+Open Seats:13
 
 
 Section ID:19733
@@ -193,7 +193,7 @@ Start Time:02:00pm
 End Time:03:15pm
 Location:JD3508
 Instructor:Liu,Li 
-Open Seats:19733
+Open Seats:9
 
 
 Section ID:16219
@@ -204,7 +204,7 @@ Start Time:03:30pm
 End Time:04:45pm
 Location:JD3508
 Instructor:Melara,Gloria E 
-Open Seats:16219
+Open Seats:5
 
 
 Section ID:16181
@@ -215,7 +215,7 @@ Start Time:12:00pm
 End Time:01:15pm
 Location:JD1538
 Instructor:Liu,Li 
-Open Seats:16181
+Open Seats:4
 
 
 Section ID:15738
@@ -226,7 +226,7 @@ Start Time:09:30am
 End Time:10:45am
 Location:JD1538
 Instructor:Liu,Li 
-Open Seats:15738
+Open Seats:11
 
 
 Section ID:15707
@@ -237,7 +237,7 @@ Start Time:11:00am
 End Time:11:50am
 Location:JD1538
 Instructor:Liu,Li 
-Open Seats:15707
+Open Seats:7
 
 
 Section ID:15975
@@ -248,7 +248,7 @@ Start Time:05:30pm
 End Time:06:45pm
 Location:JD3508
 Instructor:Gabrovsky,Peter N 
-Open Seats:15975
+Open Seats:23
 
 
 Section ID:16030
@@ -259,7 +259,7 @@ Start Time:07:00pm
 End Time:09:45pm
 Location:JD1593
 Instructor:Staff 
-Open Seats:16030
+Open Seats:0
 
 
 Section ID:15557
@@ -270,7 +270,7 @@ Start Time:07:00pm
 End Time:09:45pm
 Location:JD1553
 Instructor:Staff 
-Open Seats:15557
+Open Seats:0
 
 
 Section ID:15950
@@ -281,7 +281,7 @@ Start Time:08:00pm
 End Time:09:15pm
 Location:JD2211
 Instructor:Staff 
-Open Seats:15950
+Open Seats:28
 
 
 Section ID:15554
@@ -292,7 +292,7 @@ Start Time:12:30pm
 End Time:01:45pm
 Location:JD2211
 Instructor:Wang,Taehyung 
-Open Seats:15554
+Open Seats:23
 
 
 Section ID:15949
@@ -303,7 +303,7 @@ Start Time:07:00pm
 End Time:07:50pm
 Location:JD2211
 Instructor:Staff 
-Open Seats:15949
+Open Seats:28
 
 
 Section ID:15553
@@ -314,7 +314,7 @@ Start Time:11:30am
 End Time:12:20pm
 Location:JD2211
 Instructor:Wang,Taehyung 
-Open Seats:15553
+Open Seats:23
 
 
 Section ID:16024
@@ -325,7 +325,7 @@ Start Time:11:00am
 End Time:12:15pm
 Location:JD3510
 Instructor:Staff 
-Open Seats:16024
+Open Seats:21
 
 
 Section ID:15549
@@ -336,7 +336,7 @@ Start Time:08:00am
 End Time:09:15am
 Location:JD3510
 Instructor:Staff 
-Open Seats:15549
+Open Seats:26
 
 
 Section ID:16250
@@ -347,7 +347,7 @@ Start Time:03:30pm
 End Time:04:45pm
 Location:JD2215
 Instructor:Gabrovsky,Peter N 
-Open Seats:16250
+Open Seats:18
 
 
 Section ID:16209
@@ -358,7 +358,7 @@ Start Time:12:30pm
 End Time:01:45pm
 Location:JD2215
 Instructor:Gabrovsky,Peter N 
-Open Seats:16209
+Open Seats:23
 
 
 Section ID:15552
@@ -369,7 +369,7 @@ Start Time:02:00pm
 End Time:03:15pm
 Location:JD1618
 Instructor:Staff 
-Open Seats:15552
+Open Seats:27
 
 
 Section ID:16249
@@ -380,7 +380,7 @@ Start Time:02:00pm
 End Time:03:15pm
 Location:JD3520
 Instructor:Gabrovsky,Peter N 
-Open Seats:16249
+Open Seats:41
 
 
 Section ID:16177
@@ -391,7 +391,7 @@ Start Time:12:30pm
 End Time:01:45pm
 Location:JD1618
 Instructor:Staff 
-Open Seats:16177
+Open Seats:27
 
 
 Section ID:16193
@@ -402,7 +402,7 @@ Start Time:11:00am
 End Time:01:45pm
 Location:JD3508
 Instructor:Noga,John J 
-Open Seats:16193
+Open Seats:28
 
 
 Section ID:15798
@@ -413,7 +413,7 @@ Start Time:11:00am
 End Time:01:45pm
 Location:JD3520
 Instructor:Noga,John J 
-Open Seats:15798
+Open Seats:21
 
 
 Section ID:15551
@@ -424,7 +424,7 @@ Start Time:09:30am
 End Time:10:45am
 Location:EU103
 Instructor:Fitzgerald,Steven M 
-Open Seats:15551
+Open Seats:6
 
 
 Section ID:15672
@@ -435,7 +435,7 @@ Start Time:11:00am
 End Time:01:45pm
 Location:JD3510
 Instructor:Staff 
-Open Seats:15672
+Open Seats:21
 
 
 Section ID:15550
@@ -446,7 +446,7 @@ Start Time:07:00pm
 End Time:09:45pm
 Location:JD3508
 Instructor:Staff 
-Open Seats:15550
+Open Seats:24
 
 
 Section ID:15773
@@ -457,7 +457,7 @@ Start Time:07:00pm
 End Time:09:45pm
 Location:JD3508
 Instructor:Staff 
-Open Seats:15773
+Open Seats:6
 
 
 Section ID:19705
@@ -468,7 +468,7 @@ Start Time:03:30pm
 End Time:04:45pm
 Location:JD3510
 Instructor:Lorentz,Richard J 
-Open Seats:19705
+Open Seats:27
 
 
 Section ID:15930
@@ -479,7 +479,7 @@ Start Time:03:30pm
 End Time:04:45pm
 Location:JD3520
 Instructor:Lorentz,Richard J 
-Open Seats:15930
+Open Seats:21
 
 
 Section ID:19704
@@ -490,7 +490,7 @@ Start Time:02:00pm
 End Time:03:15pm
 Location:JD3510
 Instructor:Lorentz,Richard J 
-Open Seats:19704
+Open Seats:27
 
 
 Section ID:15929
@@ -501,7 +501,7 @@ Start Time:02:00pm
 End Time:03:15pm
 Location:JD3520
 Instructor:Lorentz,Richard J 
-Open Seats:15929
+Open Seats:21
 
 
 Section ID:19703
@@ -512,7 +512,7 @@ Start Time:12:30pm
 End Time:01:45pm
 Location:JD3520
 Instructor:McIlhenny,Robert D 
-Open Seats:19703
+Open Seats:11
 
 
 Section ID:15863
@@ -523,7 +523,7 @@ Start Time:08:30pm
 End Time:09:45pm
 Location:JD2215
 Instructor:Staff 
-Open Seats:15863
+Open Seats:4
 
 
 Section ID:15546
@@ -534,7 +534,7 @@ Start Time:12:30pm
 End Time:01:45pm
 Location:JD2215
 Instructor:Pham,Son 
-Open Seats:15546
+Open Seats:22
 
 
 Section ID:15544
@@ -545,7 +545,7 @@ Start Time:09:30am
 End Time:10:45am
 Location:JD2215
 Instructor:Pham,Son 
-Open Seats:15544
+Open Seats:25
 
 
 Section ID:15862
@@ -556,7 +556,7 @@ Start Time:07:00pm
 End Time:08:15pm
 Location:JD2215
 Instructor:Staff 
-Open Seats:15862
+Open Seats:4
 
 
 Section ID:15545
@@ -567,7 +567,7 @@ Start Time:11:00am
 End Time:12:15pm
 Location:JD2215
 Instructor:Pham,Son 
-Open Seats:15545
+Open Seats:22
 
 
 Section ID:15543
@@ -578,7 +578,7 @@ Start Time:08:00am
 End Time:09:15am
 Location:JD2215
 Instructor:Pham,Son 
-Open Seats:15543
+Open Seats:25
 
 
 Section ID:15947
@@ -589,7 +589,7 @@ Start Time:05:30pm
 End Time:06:45pm
 Location:JD2214
 Instructor:Staff 
-Open Seats:15947
+Open Seats:28
 
 
 Section ID:15542
@@ -600,7 +600,7 @@ Start Time:10:00am
 End Time:12:45pm
 Location:JD2214
 Instructor:Wiegley,Jeffrey 
-Open Seats:15542
+Open Seats:23
 
 
 Section ID:15540
@@ -611,7 +611,7 @@ Start Time:02:30pm
 End Time:03:45pm
 Location:JD2214
 Instructor:Wiegley,Jeffrey 
-Open Seats:15540
+Open Seats:11
 
 
 Section ID:15945
@@ -622,7 +622,7 @@ Start Time:05:00pm
 End Time:05:25pm
 Location:JD2214
 Instructor:Staff 
-Open Seats:15945
+Open Seats:28
 
 
 Section ID:15541
@@ -633,7 +633,7 @@ Start Time:09:00am
 End Time:09:50am
 Location:JD2214
 Instructor:Wiegley,Jeffrey 
-Open Seats:15541
+Open Seats:23
 
 
 Section ID:15539
@@ -644,7 +644,7 @@ Start Time:02:00pm
 End Time:02:25pm
 Location:JD2214
 Instructor:Wiegley,Jeffrey 
-Open Seats:15539
+Open Seats:11
 
 
 Section ID:15944
@@ -655,7 +655,7 @@ Start Time:02:00pm
 End Time:03:15pm
 Location:JD1600A
 Instructor:Melara,Gloria E 
-Open Seats:15944
+Open Seats:12
 
 
 Section ID:15730
@@ -666,7 +666,7 @@ Start Time:09:30am
 End Time:10:45am
 Location:JD1104
 Instructor:Melara,Gloria E 
-Open Seats:15730
+Open Seats:13
 
 
 Section ID:15538
@@ -677,7 +677,7 @@ Start Time:05:00pm
 End Time:06:15pm
 Location:JD1104
 Instructor:Pournaghshband,Vahab 
-Open Seats:15538
+Open Seats:0
 
 
 Section ID:15814
@@ -688,7 +688,7 @@ Start Time:12:30pm
 End Time:01:45pm
 Location:JD1104
 Instructor:Hsu,Wen Chin 
-Open Seats:15814
+Open Seats:0
 
 
 Section ID:15943
@@ -699,7 +699,7 @@ Start Time:12:30pm
 End Time:01:45pm
 Location:JD1600A
 Instructor:Melara,Gloria E 
-Open Seats:15943
+Open Seats:12
 
 
 Section ID:15729
@@ -710,7 +710,7 @@ Start Time:08:00am
 End Time:09:15am
 Location:JD1104
 Instructor:Melara,Gloria E 
-Open Seats:15729
+Open Seats:13
 
 
 Section ID:15537
@@ -721,7 +721,7 @@ Start Time:03:30pm
 End Time:04:45pm
 Location:JD1104
 Instructor:Pournaghshband,Vahab 
-Open Seats:15537
+Open Seats:0
 
 
 Section ID:15815
@@ -732,7 +732,7 @@ Start Time:11:00am
 End Time:12:15pm
 Location:JD1104
 Instructor:Hsu,Wen Chin 
-Open Seats:15815
+Open Seats:0
 
 
 Section ID:16116
@@ -743,7 +743,7 @@ Start Time:03:30pm
 End Time:04:45pm
 Location:JD1107
 Instructor:Hsu,Wen Chin 
-Open Seats:16116
+Open Seats:21
 
 
 Section ID:15532
@@ -754,7 +754,7 @@ Start Time:09:30am
 End Time:10:45am
 Location:JD1600
 Instructor:Hsu,Wen Chin 
-Open Seats:15532
+Open Seats:22
 
 
 Section ID:15631
@@ -765,7 +765,7 @@ Start Time:11:00am
 End Time:01:45pm
 Location:JD1600A
 Instructor:Staff 
-Open Seats:15631
+Open Seats:13
 
 
 Section ID:15921
@@ -776,7 +776,7 @@ Start Time:11:00am
 End Time:01:45pm
 Location:JD1107
 Instructor:Staff 
-Open Seats:15921
+Open Seats:29
 
 
 Section ID:15920
@@ -787,7 +787,7 @@ Start Time:11:00am
 End Time:01:45pm
 Location:JD1105
 Instructor:Staff 
-Open Seats:15920
+Open Seats:20
 
 
 Section ID:15918
@@ -798,7 +798,7 @@ Start Time:08:00am
 End Time:10:45am
 Location:JD1107
 Instructor:Staff 
-Open Seats:15918
+Open Seats:22
 
 
 Section ID:15917
@@ -809,7 +809,7 @@ Start Time:08:00am
 End Time:10:45am
 Location:JD1105
 Instructor:Staff 
-Open Seats:15917
+Open Seats:23
 
 
 Section ID:15526
@@ -820,7 +820,7 @@ Start Time:12:30pm
 End Time:01:45pm
 Location:JD1107
 Instructor:Bendavid,Cecile S 
-Open Seats:15526
+Open Seats:0
 
 
 Section ID:15531
@@ -831,7 +831,7 @@ Start Time:11:00am
 End Time:12:15pm
 Location:JD1105
 Instructor:Staff 
-Open Seats:15531
+Open Seats:0
 
 
 Section ID:15530
@@ -842,7 +842,7 @@ Start Time:11:00am
 End Time:12:15pm
 Location:JD1107
 Instructor:Bendavid,Cecile S 
-Open Seats:15530
+Open Seats:0
 
 
 Section ID:15527
@@ -853,7 +853,7 @@ Start Time:09:30am
 End Time:10:45am
 Location:JD1107
 Instructor:Bendavid,Cecile S 
-Open Seats:15527
+Open Seats:0
 
 
 Section ID:15524
@@ -864,7 +864,7 @@ Start Time:03:30pm
 End Time:04:45pm
 Location:JD1105
 Instructor:Parker,Lucy 
-Open Seats:15524
+Open Seats:0
 
 
 Section ID:15528
@@ -875,7 +875,7 @@ Start Time:02:00pm
 End Time:03:15pm
 Location:JD1105
 Instructor:Parker,Lucy 
-Open Seats:15528
+Open Seats:0
 
 
 Section ID:15529
@@ -886,7 +886,7 @@ Start Time:11:00am
 End Time:12:15pm
 Location:JD1107
 Instructor:Bendavid,Cecile S 
-Open Seats:15529
+Open Seats:0
 
 
 Section ID:15630
@@ -897,7 +897,7 @@ Start Time:11:00am
 End Time:12:15pm
 Location:JD1105
 Instructor:Parker,Lucy 
-Open Seats:15630
+Open Seats:0
 
 
 Section ID:15523
@@ -908,7 +908,7 @@ Start Time:09:30am
 End Time:10:45am
 Location:JD2215
 Instructor:Staff 
-Open Seats:15523
+Open Seats:0
 
 
 Section ID:15848
@@ -919,7 +919,7 @@ Start Time:09:30am
 End Time:10:45am
 Location:JD1107
 Instructor:Bendavid,Cecile S 
-Open Seats:15848
+Open Seats:0
 
 
 Section ID:15522
@@ -930,5 +930,6 @@ Start Time:09:30am
 End Time:10:45am
 Location:JD1105
 Instructor:Parker,Lucy 
-Open Seats:15522
+Open Seats:0
+
 
