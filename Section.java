@@ -1,231 +1,148 @@
-package Team6;
-
-/****************************************************************************************
-Name of Module:Section.java
- 
-Purpose:This Section object is responsible for holding section information. It is a pure storage object that inherits from the Course object, and is utilized for display purposes.
-The section object stores all necessary information about a class a student can take at CSUN.
-
-Inputs:  section ID, section name, component, grading option, start date, end date, days of week, start time, end time, location, notes, seats open, and instructor.
-
-Outputs: section ID, section name, component, grading option, start date ,end date, days of week, start time, end time, location, notes, seats open, and instructor.
-
-Submodules: n/a
-
-Author: Michael Harootoonyan
-
-Date:   Nov 11, 2016
-
-Reviewer:   Michael Harootoonyan
-Date:       Nov 23, 2016
-
-
-Revision History:
-            Programmer: 	Michael Harootoonyan
-            Date: 	Nov 23, 2016
-            Description of Change: 	added integer seats_open
-            Reviewer: 	Michael Harootoonyan
-            Date of Review: 	Nov 23, 2016
-
-****************************************************************************************/
-import java.util.ArrayList;
+package Builder;
+/**
+ * 
+ * @author Jonathan Carrasco
+ * 12/2/2016
+ * COMP 380
+ * 
+ * This class is used to hold all pertinent information for a course section.
+ * <p>
+ * The values of a Section object are strings and are as follows:
+ * course, className, type, units, section, location, days, startTime, endTime,
+ * teacher, preReqs
+ *
+ */
 
 public class Section {
 	
-	
-	
-	private int sectionID;
-	private String sectionName;
-	private String component;
-	private String gradingOption;
-	private String startDate;
-	private String endDate;
-	private String daysOfWeek;
+	private String course;
+	private String className;
+	private String type;
+	private String units;
+	private String section;
+	private String location;
+	private String days;
 	private String startTime;
 	private String endTime;
-	private String location;
-	private ArrayList<String[]> notes;
-	private String instructor;
-	private int seatsOpen;
-	private Section next;
-	
-	
-	
-	
-	
-	
-	
-	
-	public Section()
-	{
-		this.sectionID     = 0;
-		this.sectionName   = "";
-		this.component	   = "";
-		this.gradingOption = "";
-		this.startDate	   = "";
-		this.endDate	   = "";
-		this.daysOfWeek	   = "";
-		this.startTime	   = "";
-		this.endTime	   = "";
-		this.location	   = "";
-		this.notes	       = null;
-		this.instructor	   = "";
-		this.seatsOpen     = 0;
-		this.next	   = null;
+	private String teacher;
+	private String preReqs;
+
+
+	/**
+	 * Section class constructor.
+	 * The constructor creates a Section object.
+	 * The constructor has no parameters and is empty, making all values set to null.
+	 */
+	public Section(){
+		//empty constructor... all values set to null
 	}
 	
-	
-	
-	
-	
-	
-	
-	public Section (int sectionID, String sectionName, String component, String gradingOption, String startDate,
-			String endDate, String daysOfWeek, String startTime, String endTime, String location, 
-			ArrayList<String[]> notes, String instructor, int seatsOpen, Section next)
-	{
-		this.sectionID     = sectionID;
-		this.sectionName   = sectionName;
-		this.component	   = component;
-		this.gradingOption = gradingOption;
-		this.startDate	   = startDate;
-		this.endDate	   = endDate;
-		this.daysOfWeek	   = daysOfWeek;
-		this.startTime	   = startTime;
-		this.endTime	   = endTime;
-		this.location	   = location;
-		this.notes	   	   = notes;
-		this.instructor	   = instructor;
-		this.seatsOpen     = seatsOpen;
-		this.next	   	   = next;
-	}
-	
-	
-	
-	
-	
-	
-	public void setSectionID(int sectionID){
-		this.sectionID     = sectionID;
-	}
-	
-	public void setSectionName(String sectionName){
-		this.sectionName   = sectionName;
-	}
-	
-	public void setComponent(String component){
-		this.component     = component;
-	}
-	
-	public void setGradingOption(String gradingOption){
-		this.gradingOption = gradingOption;
+	public String getCourse() {
+		return course;
 	}
 
-	public void setStartDate(String startDate){
-		this.startDate    = startDate;
-	}
-	
-	public void setEndDate(String endDate){
-		this.endDate      = endDate;
-	} 
-	
-	public void setDaysOfWeek(String daysOfWeek){
-		this.daysOfWeek   = daysOfWeek;
-	}
-	
-	public void setStartTime(String startTime){
-		this.startTime    = startTime;
-	}
-	
-	public void setEndTime(String endTime){
-		this.endTime      = endTime;
-	}
-	
-	public void setLocation(String location){
-		this.location     = location;
-	}
-	
-	public void setNotes(ArrayList<String[]> notes){
-		this.notes        = notes;
-	}
-	
-	public void setInstructor(String instructor){
-		this.instructor   = instructor;
-	}
-	
-	public void setSeatsOpen(int seatsOpen){
-		this.seatsOpen = seatsOpen;
-	}
-	
-	public void setNext(Section next){
-		this.next         = next;
-	}
-	
-	
-	
-	
-	
-	
-	
-	
-	public int getSectionID(){
-		return this.sectionID;
-	}
-	
-	public String getSectionName(){
-		return this.sectionName;
-	}
-	
-	public String getComponent(){
-		return this.component;
-	}
-	
-	public String getGradingOption(){
-		return this.gradingOption;
+
+	public void setCourse(String course) {
+		this.course = course;
 	}
 
-	public String getStartDate(){
-		return this.startDate;
+
+	public String getClassName() {
+		return className;
+	}
+
+
+	public void setClassName(String className) {
+		this.className = className;
+	}
+
+
+	public String getType() {
+		return type;
+	}
+
+
+	public void setType(String type) {
+		this.type = type;
+	}
+
+
+	public String getUnits() {
+		return units;
+	}
+
+
+	public void setUnits(String units) {
+		this.units = units;
+	}
+
+
+	public String getSection() {
+		return section;
+	}
+
+
+	public void setSection(String section) {
+		this.section = section;
+	}
+
+
+	public String getLocation() {
+		return location;
+	}
+
+
+	public void setLocation(String location) {
+		this.location = location;
+	}
+
+
+	public String getDays() {
+		return days;
+	}
+
+
+	public void setDays(String days) {
+		this.days = days;
+	}
+
+
+	public String getStartTime() {
+		return startTime;
+	}
+
+
+	public void setStartTime(String startTime) {
+		this.startTime = startTime;
+	}
+
+
+	public String getEndTime() {
+		return endTime;
+	}
+
+
+	public void setEndTime(String endTime) {
+		this.endTime = endTime;
+	}
+
+
+	public String getTeacher() {
+		return teacher;
+	}
+
+
+	public void setTeacher(String teacher) {
+		this.teacher = teacher;
 	}
 	
-	public String getEndDate(){
-		return this.endDate;
+	public void setPreReq(String preReq){
+		this.preReqs = preReq;
 	}
 	
-	public String getDaysOfWeek(){
-		return this.daysOfWeek;
+	public String getPreReq(){
+		return preReqs;
 	}
 	
-	public String getStartTime(){
-		return this.startTime;
-	}
-	
-	public String getEndTime(){
-		return this.endTime;
-	}
-	
-	public String getLocation(){
-		return this.location;
-	}
-	
-	public ArrayList<String[]> getNotes(){
-		return this.notes;
-	}
-	
-	public String getInstructor(){
-		return this.instructor;
-	}
-	
-	public int getSeatsOpen(){
-		return this.seatsOpen;
-	}
-	
-	public Section getNext()
-	{
-		return this.next;
-	}
-	
-	
-	
-	
+
 }
