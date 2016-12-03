@@ -93,6 +93,10 @@ public class Planner {
         PlannerUnit temp = new PlannerUnit (semester, year);
         this.allUnits.add(temp);
     }
+            
+    public void addUnit(PlannerUnit n) {
+        this.allUnits.add(n);
+    }
     
     // ensures PlannerUnits are stored chronologically so that the earliest
     // information available is quickly accessed
