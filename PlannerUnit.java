@@ -116,20 +116,20 @@ public class PlannerUnit {
     // adds, removes, or swaps a course within the unit
     public void addCourse(Course n) {
         allCourses.addLast(n);
-        difficultyRating += n.calculateDifficultyRating(n.getCourseID());
+        difficultyRating += n.calculateDifficultyRating(n.getName());
     }
     
     public void removeCourse (Course n) {
         allCourses.remove(allCourses.indexOf(n));
-        difficultyRating -= n.calculateDifficultyRating(n.getCourseID());
+        difficultyRating -= n.calculateDifficultyRating(n.getName());
     }
     
     public void swapCourses (Course add, Course delete) {
         allCourses.remove(allCourses.indexOf(delete));
         allCourses.addLast(add);
-        difficultyRating += add.calculateDifficultyRating(add.getCourseID());
+        difficultyRating += add.calculateDifficultyRating(add.getName());
         difficultyRating -=
-                delete.calculateDifficultyRating(delete.getCourseID());
+                delete.calculateDifficultyRating(delete.getName());
     }
     
     // provides a sorting value, with a smaller number indicating an

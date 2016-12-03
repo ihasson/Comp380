@@ -267,7 +267,7 @@ public class Planner {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) throws IOException {
+//    public static void main(String[] args) throws IOException {
         // TODO code application logic here
         
         // Tests that the proper semester and year are entered
@@ -327,9 +327,9 @@ public class Planner {
         
         //--------------------------------------------------------------------//
         
-        Planner t = new Planner();
-        t.calculateDifficultyRating("COMP182");
+//        Planner t = new Planner();
+//        t.calculateDifficultyRating("COMP182");
     
     } // end main
     
-}
+//}
