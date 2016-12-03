@@ -1,148 +1,203 @@
-package Builder;
-/**
- * 
- * @author Jonathan Carrasco
- * 12/2/2016
- * COMP 380
- * 
- * This class is used to hold all pertinent information for a course section.
- * <p>
- * The values of a Section object are strings and are as follows:
- * course, className, type, units, section, location, days, startTime, endTime,
- * teacher, preReqs
- *
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
+package pkg380;
 
-public class Section {
-	
-	private String course;
-	private String className;
-	private String type;
-	private String units;
-	private String section;
-	private String location;
-	private String days;
-	private String startTime;
-	private String endTime;
-	private String teacher;
-	private String preReqs;
+import java.util.*;
+import java.time.*;
 
+public class Section extends Course { //extends added by MM
 
-	/**
-	 * Section class constructor.
-	 * The constructor creates a Section object.
-	 * The constructor has no parameters and is empty, making all values set to null.
-	 */
-	public Section(){
-		//empty constructor... all values set to null
-	}
-	
-	public String getCourse() {
-		return course;
-	}
+    int sectionID;
+    String sectionName;
+    String component;
+    String gradingOption;
+    String startDate;
+    String endDate;
+    String daysOfWeek;
+    String startTime;
+    String endTime;
+    String location;
+    ArrayList<String[]> notes;
+    String instructor;
+    Section next;
 
+    int overlaps, day;
+    LocalTime eTime;
+    LocalTime sTime;
+    boolean collides;
 
-	public void setCourse(String course) {
-		this.course = course;
-	}
+    public Section() {
 
+    }
 
-	public String getClassName() {
-		return className;
-	}
+    /*   public Section() {
 
+     this.sectionID = 0;
+     this.sectionName = "";
+     this.component = "";
+     this.gradingOption = "";
+     this.startDate = "";
+     this.endDate = "";
+     this.daysOfWeek = "";
+     this.startTime = "";
+     this.endTime = "";
+     this.location = "";
+     this.notes = null;
+     this.instructor = "";
+     this.next = null;
+     }*/
+    public Section(int sectionID, String daysOfWeek, LocalTime startTime, LocalTime endTime, String sectionName, int units, int courseID, int day) {
 
-	public void setClassName(String className) {
-		this.className = className;
-	}
+        this.sectionID = sectionID;
+        this.courseName = sectionName;
+        this.daysOfWeek = daysOfWeek;
+        this.sTime = startTime;
+        this.eTime = endTime;
+        this.units = units;
+        this.courseID = courseID;
+        this.day = day;
 
+    }
 
-	public String getType() {
-		return type;
-	}
+    /*   public Section(int sectionID, String sectionName, String component, String gradingOption, String startDate,
+     String endDate, String daysOfWeek, String startTime, String endTime, String location,
+     ArrayList<String[]> notes, String instructor, Section next) {
 
+     this.sectionID = sectionID;
+     this.sectionName = sectionName;
+     this.component = component;
+     this.gradingOption = gradingOption;
+     this.startDate = startDate;
+     this.endDate = endDate;
+     this.daysOfWeek = daysOfWeek;
+     this.startTime = startTime;
+     this.endTime = endTime;
+     this.location = location;
+     this.notes = notes;
+     this.instructor = instructor;
+     this.next = next;
+     }*/
+    public void setSectionID(int sectionID) {
+        this.sectionID = sectionID;
+    }
 
-	public void setType(String type) {
-		this.type = type;
-	}
+    public void setSectionName(String sectionName) {
+        this.sectionName = sectionName;
+    }
 
+    public void setComponent(String component) {
+        this.component = component;
+    }
 
-	public String getUnits() {
-		return units;
-	}
+    public void setGradingOption(String gradingOption) {
+        this.gradingOption = gradingOption;
+    }
 
+    public void setStartDate(String startDate) {
+        this.startDate = startDate;
+    }
 
-	public void setUnits(String units) {
-		this.units = units;
-	}
+    public void setEndDate(String endDate) {
+        this.endDate = endDate;
+    }
 
+    public void setDaysOfWeek(String daysOfWeek) {
+        this.daysOfWeek = daysOfWeek;
+    }
 
-	public String getSection() {
-		return section;
-	}
+    public void setStartTime(String startTime) {
+        this.startTime = startTime;
+    }
 
+    public void setEndTime(String endTime) {
+        this.endTime = endTime;
+    }
 
-	public void setSection(String section) {
-		this.section = section;
-	}
+    public void setLocation(String location) {
+        this.location = location;
+    }
 
+    public void setNotes(ArrayList<String[]> notes) {
+        this.notes = notes;
+    }
 
-	public String getLocation() {
-		return location;
-	}
+    public void setInstructor(String instructor) {
+        this.instructor = instructor;
+    }
 
+    public void setNext(Section next) {
+        this.next = next;
+    }
 
-	public void setLocation(String location) {
-		this.location = location;
-	}
+    public int getSectionID() {
+        return this.sectionID;
+    }
 
+    public String getSectionName() {
+        return this.sectionName;
+    }
 
-	public String getDays() {
-		return days;
-	}
+    public String getComponent() {
+        return this.component;
+    }
 
+    public String getGradingOption() {
+        return this.gradingOption;
+    }
 
-	public void setDays(String days) {
-		this.days = days;
-	}
+    public String getStartDate() {
+        return this.startDate;
+    }
 
+    public String getEndDate() {
+        return this.endDate;
+    }
 
-	public String getStartTime() {
-		return startTime;
-	}
+    public String getDaysOfWeek() {
+        return this.daysOfWeek;
+    }
 
+    public LocalTime getStartTime() {
+        return this.sTime;
+    }
 
-	public void setStartTime(String startTime) {
-		this.startTime = startTime;
-	}
+    public LocalTime getEndTime() {
+        return this.eTime;
+    }
 
+    public String getLocation() {
+        return this.location;
+    }
 
-	public String getEndTime() {
-		return endTime;
-	}
+    public ArrayList<String[]> getNotes() {
+        return this.notes;
+    }
 
+    public String getInstructor() {
+        return this.instructor;
+    }
 
-	public void setEndTime(String endTime) {
-		this.endTime = endTime;
-	}
+    public Section getNext() {
+        return this.next;
+    }
 
+    public int getDay() {
+        return day;
+    }
+    public Section getSection(Section s, int cid){
+        if (s.getCourseID() == cid){
+            return s;
+        }
+        else{
+            return null;
+        }
+    }
 
-	public String getTeacher() {
-		return teacher;
-	}
-
-
-	public void setTeacher(String teacher) {
-		this.teacher = teacher;
-	}
-	
-	public void setPreReq(String preReq){
-		this.preReqs = preReq;
-	}
-	
-	public String getPreReq(){
-		return preReqs;
-	}
-	
+    public boolean collides(Section e) {
+        return (getDay() == e.getDay() && (getStartTime().compareTo(e.getEndTime()) < 0) && (e.getStartTime().compareTo(getEndTime()) < 0));
+    }
 
 }
