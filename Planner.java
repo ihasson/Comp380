@@ -47,6 +47,8 @@ public class Planner {
         allUnits = new LinkedList();
         goalGraduationSemester = "FALL";
         //goalGraduationYear = student.getStudentYearOfAdmittance() + 4;
+        // For the purposes of the demo, all references to the Student class
+        // will be commented out.
     }
     
     public Planner(int yrOfAdmittance) {
@@ -148,7 +150,7 @@ public class Planner {
         // reads the hoursSurveyData text file to record total hours estimated
         // as well as the number of data points
         // ultimately used to calculate the average, using total/count
-        File hoursFile = new File("C:\\Users\\Andrea Lee\\Documents\\NetBeansProjects\\Planner\\2hoursSurveyData.txt");
+        File hoursFile = new File("C:\\1hoursSurveyData.txt");
         Scanner hoursInput = new Scanner(hoursFile);
 
         while (hoursInput.hasNextLine()) {
@@ -175,7 +177,7 @@ public class Planner {
         // with an A being 4.00, a B being 3.00, and so forth
         // as well as the number of data points
         // ultimately used to calculate the average, using total/count
-        File gradeFile = new File("C:\\Users\\Andrea Lee\\Documents\\NetBeansProjects\\Planner\\2gradeDistribution.txt");
+        File gradeFile = new File("C:\\1gradeDistribution.txt");
         Scanner gradeInput = new Scanner(gradeFile);
 
         while (gradeInput.hasNextLine()) {
@@ -184,9 +186,6 @@ public class Planner {
             semester = gradeInput.next();
             year = gradeInput.next();
             grade = gradeInput.next();
-            
-            // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-            System.out.println(ID + " " + courseID + " " + semester + " " + year + " " + grade);
             
             if (cID.equals(courseID))
             {
@@ -244,7 +243,6 @@ public class Planner {
         }
         else {
             //avgHours = course.getUnit(cID);
-            // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
             avgHours = 3;
         }
         
@@ -255,12 +253,6 @@ public class Planner {
             avgGrade = 2.00;
         }
         
-        // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        System.out.println();
-        System.out.println("TotalHours: " + totalHours + "\t\tCountHours: " + countHours + "\t\tAvgHours: " + avgHours);
-        System.out.println("TotalGrade: " + totalGrade + "\tCountGrade: " + countGrade + "\t\tAvgGrade: " + avgGrade);
-        System.out.println("Final Rating: " + avgHours/avgGrade);
-        
         return avgHours/avgGrade;
     } // end calculateDifficultyRating
 
@@ -269,67 +261,8 @@ public class Planner {
      */
 //    public static void main(String[] args) throws IOException {
         // TODO code application logic here
-        
-        // Tests that the proper semester and year are entered
-        // Gives the user the opportunity to try again if the number
-        // provided is out of range
-        /*
-        boolean test = false;
-        String semesterIn;
-        int yearIn;
-        
-        System.out.println
-                ("Enter semester (spring, summer, fall, or winter):");
-        Scanner scanner = new Scanner(System.in);
-        semesterIn = scanner.nextLine();
-        semesterIn = semesterIn.toUpperCase();
-        
-        if (semesterIn.equals("SPRING") || semesterIn.equals("SUMMER")
-                || semesterIn.equals("FALL") || semesterIn.equals("WINTER")) {
-            test = true;
-        }
-        
-        while (test == false) {
-            System.out.println ("Incorrect entry. Please try again:");
-               
-            semesterIn = scanner.nextLine();
-            semesterIn = semesterIn.toUpperCase();
 
-            if (semesterIn.equals("SPRING") || semesterIn.equals("SUMMER")
-                || semesterIn.equals("FALL") || semesterIn.equals("WINTER")) {
-                test = true;
-            }
-        }
-        
-        //--------------------------------------------------------------------//
-        
-        test = false;
-        
-        System.out.println("Enter year:");
-        yearIn = scanner.nextInt();
-        
-        if (yearIn >= 1958 &&
-                yearin <= Calendar.getInstance().get(Calendar.YEAR)) {
-            test = true;
-        }
-        
-        while (test == false) {
-              System.out.println ("Invalid year. Please try again:");
-               
-            yearIn = scanner.nextInt();
-
-            if (yearIn >= 1958 &&
-                    yearin <= Calendar.getInstance().get(Calendar.YEAR)) {
-                test = true;
-            }
-        }
-        */
-        
-        //--------------------------------------------------------------------//
-        
-//        Planner t = new Planner();
-//        t.calculateDifficultyRating("COMP182");
     
     } // end main
     
-//}
+}

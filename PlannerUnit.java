@@ -41,7 +41,9 @@ public class PlannerUnit {
     private int year;
     private int maxUnits;
     private double difficultyRating;
-    private LinkedList<Course> allCourses;
+    //private LinkedList<Course> allCourses;
+    // For the purposes of the demo, all references to the Course class
+    // will be commented out.
     
     private PlannerUnit prev;
     private PlannerUnit next;
@@ -68,13 +70,15 @@ public class PlannerUnit {
         return maxUnits;
     }
     
-    public int getDifficultyRating() {
+    public double getDifficultyRating() {
         return difficultyRating;
     }
     
+    /*
     public LinkedList getAllCourses() {
         return allCourses;
     }
+    */
     
     public PlannerUnit getPrev() {
         return prev;
@@ -96,13 +100,15 @@ public class PlannerUnit {
         maxUnits = n;
     }
     
-    public void setDifficultyRating(int n) {
+    public void setDifficultyRating(double n) {
         difficultyRating = n;
     }
     
+    /*
     public void setAllCourses(LinkedList n) {
         allCourses = n;
     }
+    */
 
     public void setPrev(PlannerUnit n) {
         prev = n;
@@ -114,6 +120,7 @@ public class PlannerUnit {
     
     // functions
     // adds, removes, or swaps a course within the unit
+    /*
     public void addCourse(Course n) {
         allCourses.addLast(n);
         difficultyRating += n.calculateDifficultyRating(n.getName());
@@ -131,6 +138,7 @@ public class PlannerUnit {
         difficultyRating -=
                 delete.calculateDifficultyRating(delete.getName());
     }
+    */
     
     // provides a sorting value, with a smaller number indicating an
     // earlier sort
