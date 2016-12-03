@@ -35,7 +35,8 @@ Major.class: Major.java
 Student.class: Student.java
 	$(JCC) Student.java
 
-#UI:
+UI.class: AIAI.class $(UI)
+	$(JCC) UI.java
 
 testcompile: $(AI) $(UI) $(TEST) $(OTHER) 
 	$(JCC) $(TEST)

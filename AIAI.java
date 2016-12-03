@@ -89,7 +89,7 @@ public class AIAI {
     public Planner generatePlanner(Student student, CourseTable gCT, 
                     Planner paramSource){
         int defaultDifficulty = 48; // for now will not use.
-        if(paramSource.getSemesterCount() == 0){
+        if(paramSource.numUnits() == 0){
             return generatePlanner(student, gCT, 9001);
         } else {
             //For now do the same thing either way.
@@ -133,14 +133,15 @@ public class AIAI {
                 if((c.getInt() == 0) && 
                         (curCour.getDifficulty() + curDifficulty <= 
                          maxDifficulty)){
-                    curSem.addCourse(curCour);
+                    LinkedList<Course> tlx = curSem.getAllCourses();
+                    tlx.add(curCour);
                     li.remove();
                     curDifficulty += curCour.getDifficulty();
                 } else {
                     restOfCourses.add(curCour);
                 }                    
             }
-            plan.addPlannerUnit(curSem);
+            plan.addUnit(curSem);
             return genPlan(restOfCourses, gCT, 
                             maxDifficulty, semNumb++, plan);
         }           
