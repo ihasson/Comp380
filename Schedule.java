@@ -64,8 +64,4 @@ public class Schedule {
         this.totalunits = totalunits;
     }
     
-    
-    
-    
-    
 }//end class

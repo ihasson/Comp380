@@ -4,6 +4,8 @@
 import java.util.*;
 /**
  * Provides a container for information on a course offered at CSUN.
+ * <p>
+ * <img src="doc-files/Course-1.png" alt="Class diagram">
  */
 public class Course {
     private String subject; //don't need
@@ -30,7 +32,9 @@ public class Course {
     public Boolean preReqCheck(ArrayList<String> forgot){
         return true;
     }
-
+    public int getDifficulty(){
+        return difficulty;
+    }
     public String getName(){
         return courseName;
     }
