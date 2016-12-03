@@ -41,6 +41,9 @@ UI.class: AIAI.class $(UI)
 testcompile: $(AI) $(UI) $(TEST) $(OTHER) 
 	$(JCC) $(TEST)
 
+git-add-all:
+	git add $(UI) $(AI)
+
 format: 
 	uncrustify -c uncrustify.cfg Course.java --no-backup
 
