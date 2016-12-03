@@ -1,7 +1,7 @@
 /**
  * Class: AIAI
  * 
- * Author: Izzy Hasson
+ * @Author Izzy Hasson
  */
 
 import java.util.*;
@@ -70,7 +70,7 @@ public class AIAI {
  * This determines what courses are needed and puts them into a Planner. 
  * The difficulty when using this method has no reasonable limit.
  * <p>
- * @param   Student The student information.
+ * @param   student The student information.
  * @param   gCT the Fake Global Course Table.
  * @return  Planner.
  */
@@ -80,7 +80,7 @@ public class AIAI {
 /**
  * This determines what courses are needed and puts them into a Planner. 
  * <p>
- * @param   Student The student information.
+ * @param   student The student information.
  * @param   gCT the Fake Global Course Table.
  * @param   paramSource figure out limitations on how much work the student
  *          should do from this.
@@ -99,10 +99,10 @@ public class AIAI {
 /**
  * This determines what courses are needed and puts them into a Planner. 
  * <p>
- * @param   Student The student information.
+ * @param   student The student information.
  * @param   gCT the Fake Global Course Table.
  * @param   maxDifficulty takes as input maximum difficulty value.
- * @return  Planner.
+ * @return      Planner.
  */
     public Planner generatePlanner(Student student, CourseTable gCT, 
                     int maxDifficulty){
@@ -180,9 +180,10 @@ public class AIAI {
  *
  * <img src="doc-files/AIAI-1.png" alt="topological sort">
  */
-/* note that elements of prerequisite list represent edges pointing
+/* 
+ * note that elements of prerequisite list represent edges pointing
  * AWAY from the prerequisite.
- * */
+ */
     protected ArrayList<COP> topologicalSort(ArrayList<Course> list,
                     CourseTable gCT){
     /* 
@@ -230,6 +231,8 @@ public class AIAI {
     
     /**
      * Finds the dependencies of a course using depth first search
+     * @param c
+     * @param gCT
      */
     public ArrayList<Course> findDependencies(Course c, CourseTable gCT) {
         LinkedHashMap<String, COP> cList = 
