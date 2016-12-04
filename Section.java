@@ -1,5 +1,3 @@
-package Team6;
-
 /****************************************************************************************
 Name of Module:Section.java
  
@@ -13,7 +11,7 @@ Outputs: section ID, section name, component, grading option, start date ,end da
 Submodules: n/a
 
 Author: Michael Harootoonyan
-
+        Megan Meyers
 Date:   Nov 11, 2016
 
 Reviewer:   Michael Harootoonyan
@@ -28,12 +26,11 @@ Revision History:
             Date of Review: 	Nov 23, 2016
 
 ****************************************************************************************/
-import java.util.ArrayList;
+import java.util.*;
+import java.time.*;
 
-public class Section {
-	
-	
-	
+public class Section{ //extends added by MM
+
 	private int sectionID;
 	private String sectionName;
 	private String component;
@@ -48,13 +45,11 @@ public class Section {
 	private String instructor;
 	private int seatsOpen;
 	private Section next;
-	
-	
-	
-	
-	
-	
-	
+
+    int overlaps, day;
+    LocalTime eTime;
+    LocalTime sTime;
+    boolean collides;
 	
 	public Section()
 	{
@@ -74,15 +69,15 @@ public class Section {
 		this.next	   = null;
 	}
 	
-	
-	
-	
-	
-	
-	
-	public Section (int sectionID, String sectionName, String component, String gradingOption, String startDate,
-			String endDate, String daysOfWeek, String startTime, String endTime, String location, 
-			ArrayList<String[]> notes, String instructor, int seatsOpen, Section next)
+	public Section (int sectionID, 
+            String sectionName, 
+            String component, String gradingOption, String startDate,
+			String endDate, String daysOfWeek, 
+            String startTime, String endTime, 
+            String location, 
+			ArrayList<String[]> notes, 
+            String instructor, int seatsOpen, 
+            Section next)
 	{
 		this.sectionID     = sectionID;
 		this.sectionName   = sectionName;
@@ -99,11 +94,6 @@ public class Section {
 		this.seatsOpen     = seatsOpen;
 		this.next	   	   = next;
 	}
-	
-	
-	
-	
-	
 	
 	public void setSectionID(int sectionID){
 		this.sectionID     = sectionID;
@@ -161,13 +151,6 @@ public class Section {
 		this.next         = next;
 	}
 	
-	
-	
-	
-	
-	
-	
-	
 	public int getSectionID(){
 		return this.sectionID;
 	}
@@ -224,8 +207,11 @@ public class Section {
 	{
 		return this.next;
 	}
-	
-	
-	
+    public int getDay() {
+        return day;
+    }
+    public boolean collides(Section e) {
+        return (getDay() == e.getDay() && (getStartTime().compareTo(e.getEndTime()) < 0) && (e.getStartTime().compareTo(getEndTime()) < 0));
+    }
 	
 }

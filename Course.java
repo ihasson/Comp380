@@ -24,7 +24,13 @@ public class Course {
         units = unitAmount;
         preRequisites = new ArrayList<>();
     }
-
+    
+//    Course(String name, int unitAmount, int courseID) { //MM added 3rd arg
+//        this.courseName = name;
+//        this.units = unitAmount;
+//        this.courseID = courseID;
+//        preRequisites = new ArrayList<>(); //correction by MM for double declaration
+//
     public void addPreRequisite(String course){
         preRequisites.add(course);
     }
@@ -42,4 +48,26 @@ public class Course {
     public ArrayList<String> getPreRequisites(){
         return preRequisites;
     }
+    public int getCourseID() { //MM
+        return courseID;
+    }
+    
+    public void setCourseID(int i){  //MM
+        courseID = i;
+    }
+
+    public ArrayList<Section> getCourseSelections(ArrayList<Course> courses, ArrayList<Section> sections){
+        ArrayList<Section> coursesections = new ArrayList<>();
+        for (int i = 0; i < courses.size(); i++){
+            int temp = courses.get(i).getCourseID();
+            for (int j = 0; j < sections.size(); j++){
+                if (sections.get(j).getCourseID() == temp){
+                    coursesections.add(sections.get(j));
+                }
+            }
+        }
+        return coursesections;
+    } 
+    
+   
 }
