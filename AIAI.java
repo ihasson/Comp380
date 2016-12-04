@@ -10,7 +10,6 @@ import java.util.*;
  * The actual AI Class. It figures things out and makes decisions.
  * <p>
  * <img src="doc-files/AIAI-1.png" alt="topological sort">
- * <img src="doc-files/AIAI-2.png" alt="topological sort">  
  */
 public class AIAI {
 
@@ -159,9 +158,6 @@ public class AIAI {
         return reqs;
     }
 /**
- * <img src="doc-files/AIAI-2.png" alt="topological sort">
- */
-/**
  * topologicalSort() sorts the courses of the course as follows:
  * Let the list of Courses passed to this method be a directed 
  * acyclic graph with each Course object in that list being a node.
@@ -179,7 +175,6 @@ public class AIAI {
  * @see         COP
  * <p>
  *
- * <img src="doc-files/AIAI-1.png" alt="topological sort">
  */
 /* 
  * note that elements of prerequisite list represent edges pointing
@@ -301,164 +296,156 @@ public class AIAI {
             System.out.println(c.getString() + " semester "+ c.getInt());
         }
     }
-
-//takes the head plannerunit of the planner linked list and removes the courses in the plannerunit to the schedule.courses arraylist. 
-    public void getCourses(String semester, int year) {
-        schedule = new Schedule(semester, year);
-        if (planner.allUnits.isEmpty()) {
-            System.out.println("no plannerunit availble");
-        } else {
-            workingplannerunit = planner.allUnits.removeFirst();
-        }
-        if (workingplannerunit.allCourses.isEmpty()) {
-            System.out.println("no courses in plannerunit");
-        } else {
-            for (int i = 0; i < workingplannerunit.allCourses.size(); i++) {
-                schedule.courses.add(workingplannerunit.allCourses.get(i));
-            }
-        }
-    }
-
-    public void addCourse(Course c) {
-        schedule.courses.add(c);
-    }
-
-    public void deleteCourse(Course c) {
-        schedule.courses.remove(c);
-    }
-
-    //finds the sections that match the courses from the plannerunit based on courseID (ie 380)
-    public void courseToSection() {
-
-        for (int i = 0; i < schedule.courses.size(); i++) {
-            int t = schedule.courses.get(i).getCourseID();
-
-            for (int j = 0; j < reader.listofsections.size(); j++) {
-                if (reader.listofsections.get(j).getCourseID() == t) {
-                }
-            }
-        }
-
-    }//end courseToSection
-
-    public void courseToSection(ArrayList<Course> c, ArrayList<Section> s) { //pass schedule.course & reader.list
-
-        for (int i = 0; i < c.size(); i++) {
-            int t = c.get(i).getCourseID();
-
-            for (int j = 0; j < s.size(); j++) {
-                if (s.get(j).getCourseID() == t) {
-                    fs.put(s.get(j).getCourseID(), s.get(j));
-                    schedule.schedule.add(s.get(j));
-                }
-            }
-            if (!fs.containsKey(t)) {
-                System.out.println("Sections not available for course: " + t + " this semester. ");
-            }
-
-        }
-    }//end courseToSection
-
-//Filters out all sections offered on Fridays and notifies user if all options for a course have been filtered out. These filter methods will attach to jcheckbox
-    public void noFridayFilter(ArrayList<Course> c, ArrayList<Section> s) { //pass schedule.schedule and schedule.course
-        ss = new HashMap(30);
-        for (int i = 0; i < c.size(); i++) {
-            int t = c.get(i).getCourseID();
-
-            for (int j = 0; j < s.size(); j++) {
-                if (s.get(j).getDay() == 6) {
-                    fs.remove(s.get(j).getCourseID());
-
-                    s.remove(j);
-                } else {
-                    ss.put(s.get(j).getCourseID(), s.get(j));
-                }
-            }
-            if (!ss.containsKey(t)) {
-                System.out.println("Your day filter has removed all options for course " + t);
-            }
-        }
-    }
-
-    //no classes after time set. currently set at 16:30
-    public void noEveningFilter(ArrayList<Course> c, ArrayList<Section> s) {
-        ss = new HashMap(30);
-        LocalTime time = LocalTime.of(16, 30);
-        for (int i = 0; i < c.size(); i++) {
-            int t = c.get(i).getCourseID();
-
-            for (int j = 0; j < s.size(); j++) {
-                if (s.get(j).getStartTime().compareTo(time) > 0) {
-                    fs.remove(s.get(j).getCourseID());
-                    s.remove(j);
-                } else {
-                    ss.put(s.get(j).getCourseID(), s.get(j));
-                }
-            }
-            if (!ss.containsKey(t)) {
-                System.out.println("Your time filter has removed all options for course " + t);
-            }
-        }
-    }
-
-
-//   pulls one of each. use in worst case to rig. 
-public void rigIt() {
-        ArrayList<Section> temp4 = new ArrayList();
-
-        for (int i = 0; i < schedule.courses.size(); i++) {
-
-            int temp = schedule.courses.get(i).getCourseID();
-            int counter = 0;
-            for (int j = 0; j < schedule.schedule.size(); j++) {
-                if (schedule.schedule.get(j).getCourseID() == temp && counter == 0) {
-                    temp4.add(schedule.schedule.get(j));
-                    counter++;
-
-                }
-            }
-
-            for (int k = 0; k < temp4.size(); k++) {
-                System.out.println(temp4.get(k).getCourseID());
-            }
-        }
-    }
-
-    //at this point fs has all remaining sections and 
-    public ArrayList<Section> schedule(ArrayList<ArrayList<Section>> selections, ArrayList<Section> sch) {
-        int id;
-        Section x;
-        Section y;
-
-        int p = 0;
-        int q = 0;
-        tmp = new ArrayList<>();
-
-        for (int i = 1; i < selections.size(); i++) {
-            x = selections.get(p).get(q); //380A 0,0
-            //       id = selections.get(i).get(n).getCourseID(); //id at 1,0 is 500 
-
-            for (int j = 0; j < selections.get(i).size(); j++) { //run through 500's sections
-                if (selections.get(i).isEmpty()) {
-                    break;
-                }
-                y = selections.get(i).get(j); //assign each section 1,0 1,1 1,2... for compaison
-                if (!x.collides(y)) {
-                    ss.put(y.getCourseID(), y);
-                    finals.add(y);
-                } else {
-                    tmp.add(selections.get(i).remove(j)); //take colliding classes out
-
-                }
-
-            }//inner
-         p++;
-        }//outer
-
-        finals.add(selections.get(p).get(q));
-        return finals;
-        
-    }
-
 }
 
+//
+////takes the head plannerunit of the planner linked 
+////list and removes the courses in the 
+////plannerunit to the schedule.courses arraylist. 
+//    public void getCourses(String semester, int year) {
+//        Schedule schedule = new Schedule(semester, year);
+//        if (planner.allUnits.isEmpty()) {
+//            System.out.println("no plannerunit availble");
+//        } else {
+//            workingplannerunit = planner.allUnits.removeFirst();
+//        }
+//        if (workingplannerunit.allCourses.isEmpty()) {
+//            System.out.println("no courses in plannerunit");
+//        } else {
+//            for (int i = 0; i < workingplannerunit.allCourses.size(); i++) {
+//                schedule.courses.add(workingplannerunit.allCourses.get(i));
+//            }
+//        }
+//    }
+//
+//    public void addCourse(Course c) {
+//        schedule.courses.add(c);
+//    }
+//
+//    public void deleteCourse(Course c) {
+//        schedule.courses.remove(c);
+//    }
+//
+//    //finds the sections that match the courses from the plannerunit based on courseID (ie 380)
+//    public void courseToSection() {
+//
+//        for (int i = 0; i < schedule.courses.size(); i++) {
+//            int t = schedule.courses.get(i).getCourseID();
+//
+//            for (int j = 0; j < reader.listofsections.size(); j++) {
+//                if (reader.listofsections.get(j).getCourseID() == t) {
+//                }
+//            }
+//        }
+//
+//    }//end courseToSection
+//
+//    public void courseToSection(ArrayList<Course> c, ArrayList<Section> s) { //pass schedule.course & reader.list
+//
+//        for (int i = 0; i < c.size(); i++) {
+//            int t = c.get(i).getCourseID();
+//
+//            for (int j = 0; j < s.size(); j++) {
+//                if (s.get(j).getCourseID() == t) {
+//                    fs.put(s.get(j).getCourseID(), s.get(j));
+//                    schedule.schedule.add(s.get(j));
+//                }
+//            }
+//            if (!fs.containsKey(t)) {
+//                System.out.println("Sections not available for course: " + t + " this semester. ");
+//            }
+//
+//        }
+//    }//end courseToSection
+//
+////Filters out all sections offered on Fridays and notifies user if all options for a course have been filtered out. These filter methods will attach to jcheckbox
+//    public void noFridayFilter(ArrayList<Course> c, ArrayList<Section> s) { //pass schedule.schedule and schedule.course
+//        ss = new HashMap(30);
+//        for (int i = 0; i < c.size(); i++) {
+//            int t = c.get(i).getCourseID();
+//
+//            for (int j = 0; j < s.size(); j++) {
+//                if (s.get(j).getDay() == 6) {
+//                    fs.remove(s.get(j).getCourseID());
+//
+//                    s.remove(j);
+//                } else {
+//                    ss.put(s.get(j).getCourseID(), s.get(j));
+//                }
+//            }
+//            if (!ss.containsKey(t)) {
+//                System.out.println("Your day filter has removed all options for course " + t);
+//            }
+//        }
+//    }
+//
+//    //no classes after time set. currently set at 16:30
+//    public void noEveningFilter(ArrayList<Course> c, ArrayList<Section> s) {
+//        ss = new HashMap(30);
+//        LocalTime time = LocalTime.of(16, 30);
+//        for (int i = 0; i < c.size(); i++) {
+//            int t = c.get(i).getCourseID();
+//
+//            for (int j = 0; j < s.size(); j++) {
+//                if (s.get(j).getStartTime().compareTo(time) > 0) {
+//                    fs.remove(s.get(j).getCourseID());
+//                    s.remove(j);
+//                } else {
+//                    ss.put(s.get(j).getCourseID(), s.get(j));
+//                }
+//            }
+//            if (!ss.containsKey(t)) {
+//                System.out.println("Your time filter has"+
+//                        " removed all options for course " + t);
+//            }
+//        }
+//    }
+//
+//
+////   pulls one of each. use in worst case to rig. 
+//public void rigIt() {
+//        ArrayList<Section> temp4 = new ArrayList();
+//
+//        for (int i = 0; i < schedule.courses.size(); i++) {
+//
+//            int temp = schedule.courses.get(i).getCourseID();
+//            int counter = 0;
+//            for (int j = 0; j < schedule.schedule.size(); j++) {
+//                if (schedule.schedule.get(j).getCourseID()
+//                        == temp && counter == 0) {
+//                    temp4.add(schedule.schedule.get(j));
+//                    counter++;
+//
+//                }
+//            }
+//
+//            for (int k = 0; k < temp4.size(); k++) {
+//                System.out.println(temp4.get(k).getCourseID());
+//            }
+//        }
+//    }
+////please just delete the last method called "schedule"
+////please add an ArrayList<Section> delcaration at the top called finalschedule. 
+//
+//
+//public ArrayList<Section> getSchedule(ArrayList<Section> finalSchedule) {
+//        finalschedule = new ArrayList();
+//
+//        for (int i = 0; i < schedule.courses.size(); i++) {
+//
+//            int temp = schedule.courses.get(i).getCourseID();
+//            int counter = 0;
+//            for (int j = 0; j < schedule.schedule.size(); j++) {
+//                if (schedule.schedule.get(j).getCourseID() 
+//						== temp && counter == 0) {
+//                    finalschedule.add(schedule.schedule.get(j));
+//                    counter++;
+//
+//                }
+//            }
+//
+//        }
+//        return finalschedule;
+//    }
+//}
+//

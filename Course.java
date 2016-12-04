@@ -56,18 +56,18 @@ public class Course {
         courseID = i;
     }
 
-    public ArrayList<Section> getCourseSelections(ArrayList<Course> courses, ArrayList<Section> sections){
-        ArrayList<Section> coursesections = new ArrayList<>();
-        for (int i = 0; i < courses.size(); i++){
-            int temp = courses.get(i).getCourseID();
-            for (int j = 0; j < sections.size(); j++){
-                if (sections.get(j).getCourseID() == temp){
-                    coursesections.add(sections.get(j));
-                }
-            }
-        }
-        return coursesections;
-    } 
-    
+//    public ArrayList<Section> getCourseSelections(ArrayList<Course> courses, ArrayList<Section> sections){
+//        ArrayList<Section> coursesections = new ArrayList<>();
+//        for (int i = 0; i < courses.size(); i++){
+//            int temp = courses.get(i).getCourseID();
+//            for (int j = 0; j < sections.size(); j++){
+//                if (sections.get(j).getCourseID() == temp){
+//                    coursesections.add(sections.get(j));
+//                }
+//            }
+//        }
+//        return coursesections;
+//    } 
+//    
    
 }
