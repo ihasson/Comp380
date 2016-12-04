@@ -32,7 +32,7 @@ public class Student {
 	private Major studentMajor;
 	private Schedule currentSchedule;
 	private Planner studentPlaner;
-	private LinkedList<Course> studentTransscript;
+	private LinkedList<Course> studentTranscript;
 	private char middleInitial;
 	private int studentYearOfAdmit;
 	
@@ -45,7 +45,7 @@ public class Student {
 		this.middleInitial = ' ';
 		this.studentMonthOfAdmit = "";
 		this.studentYearOfAdmit = 0;
-		this.studentTransscript = new LinkedList<Course>();
+		this.studentTranscript = new LinkedList<Course>();
 	}//end
 	
 	public Student(String sId, String sFirstName, String sLastName, char sInit){
@@ -53,44 +53,79 @@ public class Student {
 		this.firstName = sFirstName;
 		this.lastName = sLastName;
 		this.middleInitial = sInit;
-		this.studentTransscript = new LinkedList<Course>();
+		this.studentTranscript = new LinkedList<Course>();
 		this.studentMonthOfAdmit = "not set";
 		this.studentYearOfAdmit = 0;
 	}//end
 	
 //public Methods:
 	
-	/*
-	 * adds a course to the list.
+	/**
+	 * adds a course to the list of 
+	 * student transcript.
+	 * @param Course
+	 * @return void
 	 */
-	public void updatTransscript(Course input){
-		this.studentTransscript.add(input);
+	public void updatTranscript(Course input){
+		this.studentTranscript.add(input);
 	}//end 
 	
-	/*
+	/**
 	 * returns a course from the list at
 	 * the given index i.
+	 * @param Integer
+	 * @return Course at index i
 	 */
-	public Course getCorsefromTransscript(int i){
-		return this.studentTransscript.get(i);
+	public Course getCoursefromTranscript(int i){
+		return this.studentTranscript.get(i);
 	}//end
 	
-	/*
+	/**
+	 * Finds and returns the course from
+	 * the student transcripts
+	 * @param Course
+	 * @return Course
+	 */
+	public Course getCorsefromTranscript(Course i){
+		return this.studentTranscript.get(this.studentTranscript.indexOf((Course)i));
+	}//end
+	
+	/**
 	 * returns a boolean if the given course 
 	 * has been taken.
+	 * @param Course
+	 * @return boolean
 	 */
-	public boolean courseTaken(Course input){
-		if(this.studentTransscript.contains(input)){
+	public boolean coursesTaken(Course input){
+		if(this.studentTranscript.contains(input)){
 			return true;
 		}//end if
 		return false;
 	}//end 
 	
-	/*
-	 * returns the list as an array of courses
+	/**
+	 * returns true if the student has taken
+	 * and passed a course.
+	 * @param Course
+	 * @return boolean
+	 */
+	public boolean coursesPassed(Course input){
+		if(this.coursesTaken(input)){
+			if(this.getCorsefromTranscript(input).coursePassed()){
+				return true;
+			}//end pass check
+		}//end if
+		return false;
+	}//end
+	
+	/**
+	 * returns the list as an array of courses.
+	 * @param void
+	 * @return Course[]
+	 * 
 	 */
 	public Course[] courseLodeout(){
-		return (Course[]) this.studentTransscript.toArray();
+		return (Course[]) this.studentTranscript.toArray();
 	}//end
 	
 //Get and Set methods:
