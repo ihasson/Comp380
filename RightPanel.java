@@ -20,20 +20,23 @@ import javax.swing.JPanel;
 public class RightPanel extends JPanel {
 	Options rightOp;
 	Graphics g;
+	JLabel tree;
 	public RightPanel() {
 		setLayout(new BorderLayout());
 		rightOp = new Options();
 		add(rightOp, BorderLayout.SOUTH);
 		BufferedImage img;
 		try {
-			img = ImageIO.read(getClass().getClassLoader().getResource("tree.jpg")); //Image MUST be resized manually
-			JLabel tree= new JLabel(new ImageIcon(img));
+			img = ImageIO.read(getClass().getClassLoader().getResource("tree.png")); //Image MUST be resized manually
+			tree= new JLabel(new ImageIcon(img));
 			add(tree, BorderLayout.NORTH);
+			tree.setVisible(false);
 			
 		} catch (IOException e) {
 			System.out.println("File not found");
 			e.printStackTrace();
 		}
+		
 		
 		
 

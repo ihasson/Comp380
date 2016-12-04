@@ -19,6 +19,7 @@ public class NewSchedule extends JFrame {
 	public NewSchedule() {
 		add(t);
 		setSize(250,250);	//Dimensions of new window frame
+		this.setResizable(false);
 	}
 
 }

@@ -15,11 +15,11 @@ import javax.swing.JPanel;
  */
 public class StudentInfo extends JPanel {
 	
-	public StudentInfo(String name, String id) { //Will receive a student object
-		JLabel n = new JLabel(name + "\n");
-		JLabel i = new JLabel(id);
-		JLabel y = new JLabel("Month, Year Admitted");
-		JLabel m = new JLabel("Major");
+	public StudentInfo(Student s) { //Will receive a student object
+		JLabel n = new JLabel(s.getFirstName() + " " + s.getLastName() +  ", "  + s.getMiddleInitial());
+		JLabel i = new JLabel(s.getStudentId());
+		JLabel y = new JLabel(s.getStudentMonthOfAdmit() + " " + s.getStudentYearOfAdmit());
+		JLabel m = new JLabel(s.getStudentMajor().getName());
 		Dimension dim = new Dimension();
 		
 		dim.height = 250;

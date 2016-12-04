@@ -17,14 +17,13 @@ public class LeftPanel extends JPanel {
 	JTextField sName;
 	JTextField sID;
 	UISchedule s;
-	StudentInfo si = new StudentInfo("Last, First MI", "000000000"); //Will pass in a student object
+	StudentInfo si; //Will pass in a student object
 	
-		public LeftPanel() {
-			Dimension dim = getPreferredSize();
-			dim.width = 250;
-			setPreferredSize(dim);
+		public LeftPanel(Student stu) {
+			si = new StudentInfo(stu);
+
 			setLayout(new BorderLayout());
-			s = new UISchedule();
+			s = new UISchedule(stu);
 			add(s, BorderLayout.SOUTH);		
 			add(si, BorderLayout.NORTH);
 

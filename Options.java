@@ -3,6 +3,7 @@
  * 
  * Author: Brandon Garcia
  */
+import java.awt.BorderLayout;
 import java.awt.Container;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -10,6 +11,7 @@ import java.awt.event.ActionListener;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
@@ -22,25 +24,29 @@ public class Options extends JPanel implements ActionListener {
 	private JButton genSchedule;
 	private JButton view;
 	private JButton exit;
-	private JButton changeMajor;
 	private NewSchedule n;
 	private boolean algRan;	//checks whether or not algorithm for new schedule has been run
+	
 	public Options() {
-		setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
-		genSchedule = new JButton("Generate Schedule");
-		view = new JButton("View Schedule");
-		changeMajor = new JButton("Change Major");
+		setLayout(new BorderLayout());
+		genSchedule = new JButton("\t\tGenerate Schedule");
+		view = new JButton("\t\tView Schedule");
 		exit = new JButton("EXIT");
 				
-		add(genSchedule);	//Buttons are added vertically
-		add(view);
-		add(changeMajor);
-		add(exit);
+		add(genSchedule, BorderLayout.NORTH);	//Buttons are added vertically
+		add(view, BorderLayout.CENTER);
+		add(exit, BorderLayout.SOUTH);
+		
+		
 		
 		genSchedule.addActionListener(this);
 		view.addActionListener(this);
 		exit.addActionListener(this);		
-	}	
+	}//end constructor 	
+	
+	
+	
+	
 	/**
 	 * Receives button objects and performs actions based on which button is received
 	 */
@@ -72,6 +78,8 @@ public class Options extends JPanel implements ActionListener {
 		n = new NewSchedule();
 		algRan = true;
 		n.setVisible(true);
+		RightPanel rp = (RightPanel) this.getParent();
+		rp.tree.setVisible(true);
 }	
 	/**
 	 * Opens previously generated schedule

@@ -33,7 +33,7 @@ Revision History:
 
 
 //package planner;
-import java.util.*;
+
 
 public class PlannerUnit {
     // attributes stored in the class
@@ -41,7 +41,7 @@ public class PlannerUnit {
     private int year;
     private int maxUnits;
     private double difficultyRating;
-    private LinkedList<Course> allCourses;
+    //private LinkedList<Course> allCourses;
     // For the purposes of the demo, all references to the Course class
     // will be commented out.
     
@@ -74,11 +74,11 @@ public class PlannerUnit {
         return difficultyRating;
     }
     
-    
+    /*
     public LinkedList getAllCourses() {
         return allCourses;
     }
-    
+    */
     
     public PlannerUnit getPrev() {
         return prev;

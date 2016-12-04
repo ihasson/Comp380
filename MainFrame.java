@@ -17,20 +17,26 @@ import javax.swing.JFrame;
 public class MainFrame extends JFrame {
 	RightPanel r;
 	LeftPanel l;
-	public MainFrame() {
+	Student st;
+	public MainFrame() {			
 		super("AI" + "\u00B2"); //Unicode superscript 2
+		Student st = new Student("123456789", "Garcia", "Brandon", 'R');
+		st.setStudentMonthOfAdmit("August");
+		st.setStudentYearOfAdmit(2014);
+		st.setStudentMajor(new Major("Computer Science"));
 		setLayout(new BorderLayout());		
 		
 		r = new RightPanel();	//Right side of screen
-		l = new LeftPanel();	//Left side of screen
+		l = new LeftPanel(st);	//Left side of screen
 		
 		add(r, BorderLayout.EAST);
 		add(l, BorderLayout.WEST);
+		this.setResizable(false);
 		
-		
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setSize(500, 500);	//Dimensions of initial window frame
-		setVisible(true);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setSize(500, 500);	//Dimensions of initial window frame
+		this.setVisible(true);
+		//this.pack();
 	}
 	
 }

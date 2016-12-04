@@ -45,6 +45,10 @@ public class Major {
 		majorReqs = courses;
 	}
 	
+	public Major(String name){
+		this.majorName = name;
+	}
+	
 	/*
 	 * Adds a Course object to the requirements list of courses for a Major
 	 * 
