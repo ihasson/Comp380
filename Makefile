@@ -3,7 +3,8 @@ JFLAG = -g
 AI = AIAI.java Course.java Planner.java Section.java Major.java \
 	 Planner.java PlannerUnit.java Student.java 
 
-UI = LeftPanel.java MainFrame.java Options.java RightPanel.java #App.java
+UI = LeftPanel.java MainFrame.java Options.java RightPanel.java App.java \
+		UISchedule.java
 	 
 TEST = AIUnitTests.java  
 OTHER = CsSectionsTextfileUpdater.java
@@ -42,7 +43,7 @@ testcompile: $(AI) $(UI) $(TEST) $(OTHER)
 	$(JCC) $(TEST)
 
 git-add-all:
-	git add $(UI) $(AI)
+	git add $(UI) $(AI) Makefile
 
 format: 
 	uncrustify -c uncrustify.cfg Course.java --no-backup
